@@ -7,7 +7,7 @@ title: 关于我
 
 ## 联系我
 
-- 微信&nbsp;&nbsp;&nbsp;: 18322239549
+- 微信&nbsp;&nbsp;: 18322239549
 
 - Email&nbsp;: [han_gr@foxmail.com](http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=CWFoZ1Zue0lvZnFkaGBlJ2pmZA)
 
