@@ -3,7 +3,7 @@ encoding: utf-8
 # SEO相关信息
 title: HanGR Blog
 description: HanGR的个人博客
-keywords: HanGR,Blog,Python,Html,JavaScript
+keywords: HanGR,Blog,Python,Java
 author: HanGR
 plugins:
   - jekyll-regex-replace
@@ -46,7 +46,7 @@ extClickEffect: false
 extAdsense: false
 
 # 数学公式支持，比较影响加载速度,不需要请设置为false
-extMath: false
+extMath: true
 
 # 显示访问量统计，由不蒜子提供服务
-extCount: false
+extCount: true
