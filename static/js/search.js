@@ -1,21 +1,21 @@
 // 加载所有文章数据，优先使用localStorage缓存
 function loadAllPostData(callback) {
   if (localStorage.db && localStorage.dbVersion == blog.buildAt) {
-    console.log('loadAllPostData from localStorage')
+    document.querySelector('.page-search .icon-loading').style.opacity = 0
     callback ? callback(localStorage.db) : ''
     return
   }
 
-  console.log('loadAllPostData from ajax')
   localStorage.removeItem('dbVersion')
   localStorage.removeItem('db')
 
   blog.ajax(
     {
       timeout: 20000,
-      url: blog.baseurl + '/static/xml/search.xml'
+      url: blog.baseurl + '/static/xml/search.xml?t=' + blog.buildAt
     },
     function (data) {
+      document.querySelector('.page-search .icon-loading').style.opacity = 0
       localStorage.db = data
       localStorage.dbVersion = blog.buildAt
       callback ? callback(data) : ''
@@ -33,24 +33,17 @@ blog.addLoadEvent(function () {
   let titles = []
   // 正文内容
   let contents = []
-  // IOS 键盘中文输入bug
+  // 低版本chrome，输入拼音的过程中也会触发input事件
   let inputLock = false
   // 输入框
   let input = document.getElementById('search-input')
 
-  // 非搜索页面，预加载数据
+  // 非搜索页面
   if (!input) {
-    setTimeout(function () {
-      loadAllPostData()
-    }, 3500)
     return
   }
 
-  let loadingDOM = document.querySelector('.page-search h1 img')
-  loadingDOM.style.opacity = 1
   loadAllPostData(function (data) {
-    console.log('loadAllPostData done')
-    loadingDOM.style.opacity = 0
     titles = parseTitle()
     contents = parseContent(data)
     search(input.value)
@@ -79,7 +72,7 @@ blog.addLoadEvent(function () {
   function search(key) {
     // <>& 替换
     key = blog.trim(key)
-    key = key.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/&/g, '&amp;')
+    key = key.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
     let doms = document.querySelectorAll('.list-search li')
     let h1 = '<span class="hint">'
@@ -100,30 +93,27 @@ blog.addLoadEvent(function () {
         continue
       }
       let hide = true
-      let r1 = new RegExp(blog.encodeRegChar(key), 'gi')
-      let r2 = new RegExp(blog.encodeRegChar(key), 'i')
 
-      // 标题全局替换
-      if (r1.test(title)) {
+      // 搜索标题
+      const idx1 = title.toLowerCase().indexOf(key.toLowerCase())
+      if (idx1 != -1) {
         hide = false
-        dom_title.innerHTML = title.replace(r1, h1 + key + h2)
+        dom_title.innerHTML =  title.substring(0, idx1) + h1 + title.substring(idx1, idx1 + key.length) + h2 + title.substring(idx1 + key.length)
       }
-      // 内容先找到第一个，然后确定100个字符，再对这100个字符做全局替换
-      let cResult = r2.exec(content)
-      if (cResult) {
+
+      // 搜索内容
+      const idx2 = content.toLowerCase().indexOf(key.toLowerCase())
+      if (idx2 != -1) {
         hide = false
-        let index = cResult.index
-        let leftShifting = 10
-        let left = index - leftShifting
-        let right = index + (100 - leftShifting)
-        if (left < 0) {
-          right = right - left
-        }
-        content = content.substring(left, right)
-        dom_content.innerHTML = content.replace(r1, h1 + key + h2) + '...'
+        const left = Math.max(idx2 - 20, 0)
+        const right = Math.min(left + Math.max(key.length, 100), content.length)
+        const newContent = content.substring(left, right)
+        const idx = newContent.toLowerCase().indexOf(key.toLowerCase())
+        const innerHTML = newContent.substring(0, idx) + h1 + newContent.substring(idx, idx + key.length) + h2 + newContent.substring(idx + key.length)
+        dom_content.innerHTML = innerHTML + '...'
       }
       // 内容未命中标题命中，内容直接展示前100个字符
-      if (!cResult && !hide && content) {
+      if (idx1 !== -1 && idx2 == -1) {
         dom_content.innerHTML = content.substring(0, 100) + '...'
       }
       if (hide) {

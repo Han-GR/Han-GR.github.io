@@ -5,6 +5,8 @@ title: HanGR Blog
 description: HanGR的个人博客
 keywords: HanGR,Blog,Python,Html,JavaScript
 author: HanGR
+plugins:
+  - jekyll-regex-replace
 
 # 这些不要动
 permalink: /posts/:year/:month/:day/:title.html
@@ -19,10 +21,9 @@ exclude: ['CNAME', 'README.md', 'LICENSE', '_site', 'dist', 'Gemfile', 'Gemfile.
 domainUrl: 'https://han-gr.github.io/'
 baseurl: ''
 
-# 吐个槽地址，会在chat页面中重定向到该地址
-#tucaoUrl: https://support.qq.com/product/86335
-
 # 菜单
+# 必填字段 title: '文本' url: '链接'
+# 可选字段 target: '_blank' 新页面打开 
 menu:
   - title: 首页
     url: /
@@ -44,14 +45,8 @@ extClickEffect: false
 # _includes/ext-adsense.html 里面修改为自己的配置
 extAdsense: false
 
-# 腾讯MTA移动分析,不需要请设置为false
-# _includes/ext-adsense.html 里面修改为自己的配置
-extMTA: true
-
-# 百度收录自动推送,不需要请设置为false
-extBaidu: true
-
 # 数学公式支持，比较影响加载速度,不需要请设置为false
 extMath: false
 
-# 友情链接
+# 显示访问量统计，由不蒜子提供服务
+extCount: false
