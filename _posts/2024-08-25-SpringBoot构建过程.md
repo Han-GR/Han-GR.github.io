@@ -7,7 +7,7 @@ categories: [SpringBoot, Java, 后端]
 
 
 ### 方式一
-- github 上搜索 SpringBoot 模板，拉取现成模板（不推荐使用）
+- github 上搜索 SpringBoot 模板, 拉取现成模板（不推荐使用）
 - ![github搜索](img.png)
 
 
