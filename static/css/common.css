@@ -210,3 +210,33 @@ input:-webkit-autofill {
     font-size: 15px;
   }
 }
+
+/**
+新增
+ */
+.cnblogs-markdown pre {
+  position: relative;
+}
+.cnblogs-markdown pre > span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 3px;
+  padding:0 10px;
+  font-size: 12px;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  display:none;
+  margin:8px 10px;
+  transition: background .5s;
+  -moz-transition: background .5s;
+  -webkit-transition: background .5s;
+  -o-transition: background .5s;
+}
+.cnblogs-markdown pre > span:hover {
+  background: #ddd
+}
+.cnblogs-markdown pre:hover > span {
+  display:block;
+}
