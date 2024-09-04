@@ -1,10 +1,10 @@
 ---
 layout: mypost
 title: 后端 Dockerfile 模板
-categories: [Java, maven, Docker, 后端]
+categories: [ Java, maven, Docker, 后端 ]
 ---
 
-```
+```dockerfile
 # 自己制作的 jdk21 + mvn3.9.9 的 Docker 镜像
 FROM registry.cn-beijing.aliyuncs.com/hengjixiang/base-image:v2
 
