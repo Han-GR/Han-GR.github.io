@@ -3,7 +3,7 @@ layout: mypost
 title: 关于我
 ---
 
-> Hello 陌生人，欢迎访问 HanGR Blog
+> Hello 陌生人, 欢迎访问 HanGR Blog
 
 ## 联系我
 

@@ -15,7 +15,7 @@
 })()
 
 /**
- * 工具，允许多次onload不被覆盖
+ * 工具, 允许多次onload不被覆盖
  * @param {方法} func
  */
 blog.addLoadEvent = function (func) {
@@ -31,7 +31,7 @@ blog.addLoadEvent = function (func) {
 }
 
 /**
- * 工具，兼容的方式添加事件
+ * 工具, 兼容的方式添加事件
  * @param {单个DOM节点} dom
  * @param {事件名} eventName
  * @param {事件方法} func
@@ -50,7 +50,7 @@ blog.addEvent = function (dom, eventName, func, useCapture) {
 }
 
 /**
- * 工具，DOM添加某个class
+ * 工具, DOM添加某个class
  * @param {单个DOM节点} dom
  * @param {class名} className
  */
@@ -63,7 +63,7 @@ blog.addClass = function (dom, className) {
 }
 
 /**
- * 工具，DOM是否有某个class
+ * 工具, DOM是否有某个class
  * @param {单个DOM节点} dom
  * @param {class名} className
  */
@@ -76,7 +76,7 @@ blog.hasClass = function (dom, className) {
 }
 
 /**
- * 工具，DOM删除某个class
+ * 工具, DOM删除某个class
  * @param {单个DOM节点} dom
  * @param {class名} className
  */
@@ -92,7 +92,7 @@ blog.removeClass = function (dom, className) {
 }
 
 /**
- * 工具，兼容问题，某些OPPO手机不支持ES5的trim方法
+ * 工具, 兼容问题, 某些OPPO手机不支持ES5的trim方法
  * @param {字符串} str
  */
 blog.trim = function (str) {
@@ -100,7 +100,7 @@ blog.trim = function (str) {
 }
 
 /**
- * 工具，转义html字符
+ * 工具, 转义html字符
  * @param {字符串} str
  */
 blog.htmlEscape = function (str) {
@@ -112,7 +112,7 @@ blog.htmlEscape = function (str) {
 }
 
 /**
- * 工具，转换实体字符防止XSS
+ * 工具, 转换实体字符防止XSS
  * @param {字符串} str
  */
 blog.encodeHtml = function (html) {
@@ -124,7 +124,7 @@ blog.encodeHtml = function (html) {
 }
 
 /**
- * 工具， 转义正则关键字
+ * 工具,  转义正则关键字
  * @param {字符串} str
  */
 blog.encodeRegChar = function (str) {
@@ -138,7 +138,7 @@ blog.encodeRegChar = function (str) {
 }
 
 /**
- * 工具，Ajax
+ * 工具, Ajax
  * @param {字符串} str
  */
 blog.ajax = function (option, success, fail) {
@@ -187,7 +187,7 @@ blog.ajax = function (option, success, fail) {
 }
 
 /**
- * 特效：点击页面文字冒出特效
+ * 特效: 点击页面文字冒出特效
  */
 blog.initClickEffect = function (textArr) {
   function createDOM(text) {

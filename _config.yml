@@ -17,11 +17,11 @@ kramdown:
 exclude: ['CNAME', 'README.md', 'LICENSE', '_site', 'dist', 'Gemfile', 'Gemfile.lock', 'blog.sh']
 
 # 域名配置
-# baseurl配置,如果网站部署在根目录下的其他目录中，请设置为 /目录名
+# baseurl配置,如果网站部署在根目录下的其他目录中, 请设置为 /目录名
 domainUrl: 'https://han-gr.github.io/'
 baseurl: ''
 
-# 吐个槽地址，会在chat页面中重定向到该地址
+# 吐个槽地址, 会在chat页面中重定向到该地址
 #tucaoUrl: https://support.qq.com/product/86335
 
 # 菜单
@@ -48,8 +48,8 @@ extClickEffect: false
 # _includes/ext-adsense.html 里面修改为自己的配置
 extAdsense: false
 
-# 数学公式支持，比较影响加载速度,不需要请设置为false
+# 数学公式支持, 比较影响加载速度,不需要请设置为false
 extMath: false
 
-# 显示访问量统计，由不蒜子提供服务
+# 显示访问量统计, 由不蒜子提供服务
 extCount: false

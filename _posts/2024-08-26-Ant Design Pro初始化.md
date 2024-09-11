@@ -18,7 +18,7 @@ pro create myapp
 
 #### 选择 umi 的版本
 
-- 如果选择了 umi@4 版本, 暂时还不支持全量区块。
+- 如果选择了 umi@4 版本, 暂时还不支持全量区块. 
 - 如果选择了 umi@3, 还可以选择 pro 的模板, pro 是基础模板, 只提供了框架运行的基本内容, complete 包含所有区块,
   不太适合当基础模板来进行二次开发
 
@@ -34,7 +34,7 @@ pro create myapp
   complete
 ```
 
-#### 安装依赖：
+#### 安装依赖: 
 
 ```bash
 $ cd myapp && tyarn

@@ -10,8 +10,8 @@ let baseUrl = '{{site.baseurl}}'
 let cachePrefix = 'blog_'
 let cacheKey = cachePrefix + version
 
-// 不设置skipWaiting，更新后进入wating状态，依旧是旧的service-worker生效，直到旧的不控制任何 client，比如关闭浏览器，此时再打开页面才会生效
-// 设置skipWaiting后，立即成效，这时候会出现一个页面由sw-v1控制，后面又变成sw-v2控制，自己的程序要处理好使用不同sw版本的情况
+// 不设置skipWaiting, 更新后进入wating状态, 依旧是旧的service-worker生效, 直到旧的不控制任何 client, 比如关闭浏览器, 此时再打开页面才会生效
+// 设置skipWaiting后, 立即成效, 这时候会出现一个页面由sw-v1控制, 后面又变成sw-v2控制, 自己的程序要处理好使用不同sw版本的情况
 self.skipWaiting()
 
 self.addEventListener('install', function (event) {
@@ -38,7 +38,7 @@ self.addEventListener('install', function (event) {
   )
 })
 
-// fetch根据的是cacheKey进行分组，无需等待event.waitUntil
+// fetch根据的是cacheKey进行分组, 无需等待event.waitUntil
 self.addEventListener('activate', function (event) {
   console.log('serviceWorker activate')
 

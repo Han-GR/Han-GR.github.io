@@ -1,4 +1,4 @@
-// 加载所有文章数据，优先使用localStorage缓存
+// 加载所有文章数据, 优先使用localStorage缓存
 function loadAllPostData(callback) {
   if (localStorage.db && localStorage.dbVersion == blog.buildAt) {
     document.querySelector('.page-search .icon-loading').style.opacity = 0
@@ -33,7 +33,7 @@ blog.addLoadEvent(function () {
   let titles = []
   // 正文内容
   let contents = []
-  // 低版本chrome，输入拼音的过程中也会触发input事件
+  // 低版本chrome, 输入拼音的过程中也会触发input事件
   let inputLock = false
   // 输入框
   let input = document.getElementById('search-input')
@@ -112,7 +112,7 @@ blog.addLoadEvent(function () {
         const innerHTML = newContent.substring(0, idx) + h1 + newContent.substring(idx, idx + key.length) + h2 + newContent.substring(idx + key.length)
         dom_content.innerHTML = innerHTML + '...'
       }
-      // 内容未命中标题命中，内容直接展示前100个字符
+      // 内容未命中标题命中, 内容直接展示前100个字符
       if (idx1 !== -1 && idx2 == -1) {
         dom_content.innerHTML = content.substring(0, 100) + '...'
       }
