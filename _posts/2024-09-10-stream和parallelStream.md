@@ -1,6 +1,6 @@
 ---
 layout: mypost
-title: stream()和parallelStream()
+title: stream和parallelStream
 categories: [ java, stream, parallelStream, 踩坑 ]
 ---
 
@@ -12,15 +12,15 @@ categories: [ java, stream, parallelStream, 踩坑 ]
   中间操作返回一个Stream，而终止操作则返回一个非Stream的结果。
 - parallelStream()方法是stream()方法的并行版本，它可以并行处理数据，提高处理速度。
 
-#### Stream的特点
+#### Stream()的特点
 
-- Stream只能操作一次，只能遍历一次。
-- Stream只能操作集合中的元素，不能添加元素。
-- Stream操作之后，原集合不会被修改。
-- Stream只能被消费一次，消费完之后就没有内容可消费了。
-- Stream只能在集合元素类型相同的情况下使用。
-- Stream的操作是延迟执行的，只有调用终止操作，才会真正执行操作。
-- Stream的操作可以串行或并行执行。
+- Stream()只能操作一次，只能遍历一次。
+- Stream()只能操作集合中的元素，不能添加元素。
+- Stream()操作之后，原集合不会被修改。
+- Stream()只能被消费一次，消费完之后就没有内容可消费了。
+- Stream()只能在集合元素类型相同的情况下使用。
+- Stream()的操作是延迟执行的，只有调用终止操作，才会真正执行操作。
+- Stream()的操作可以串行或并行执行。
 
 #### parallelStream()方法的特点
 
@@ -39,10 +39,10 @@ categories: [ java, stream, parallelStream, 踩坑 ]
 
 #### 踩坑
 
-- ParallelStreams使用JVM默认的forkJoin框架的线程池由当前线程去执行并行操作
+- ParallelStreams()使用JVM默认的forkJoin框架的线程池由当前线程去执行并行操作
 - 阻塞操作：调用第三方API时，由于响应时间较长，会导致线程阻塞，影响整体性能。
 - 线程池耗尽：ForkJoinPool.common() 的线程池可能会被耗尽，导致后续任务性能下降。
-- 并行流的影响：使用 ParallelStream 时，长时间运行的函数或阻塞操作会影响整个程序的性能，导致其他部分的执行变得不可预测。
+- 并行流的影响：使用 ParallelStream() 时，长时间运行的函数或阻塞操作会影响整个程序的性能，导致其他部分的执行变得不可预测。
 
 #### 解决方案
 
@@ -101,7 +101,7 @@ class ApiBlocker implements ManagedBlocker {
 ForkJoinPool.managedBlock(new ApiBlocker(url));
 ```
 
-- 避免长时间运行的函数：在 ParallelStream 中尽量避免使用长时间运行的函数，或者将这些函数拆分成更小的任务，以减少对线程池的影响。
+- 避免长时间运行的函数：在 ParallelStream() 中尽量避免使用长时间运行的函数，或者将这些函数拆分成更小的任务，以减少对线程池的影响。
 
 #### 总结
 
