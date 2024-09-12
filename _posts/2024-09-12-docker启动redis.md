@@ -10,11 +10,11 @@ categories: [ docker, redis ]
 
 ### 步骤
 
-1. 安装docker
+#### 1. 安装docker
 
 - 可以查看之前的文章[docker安装](https://han-gr.github.io/posts/2024/08/31/docker%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98.html)
 
-2. 创建Dockerfile文件
+#### 2. 创建Dockerfile文件
 
 ```dockerfile
 # 使用官方的Redis镜像作为基础镜像
@@ -30,7 +30,7 @@ EXPOSE 6379
 CMD ["sh", "-c", "redis-server /usr/local/etc/redis/redis.conf"]
 ```
 
-3. 创建redis.conf文件
+#### 3. 创建redis.conf文件
 
 ```conf
 # redis.conf
@@ -51,13 +51,13 @@ maxmemory 2gb      # 最大内存
 maxmemory-policy noeviction     # 内存淘汰策略
 ```
 
-4. 构建镜像
+#### 4. 构建镜像
 
 ```bash
 docker build -t redis:latest .
 ```
 
-5. 运行容器
+#### 5. 运行容器
 
 ```bash
 docker run -dit -p 6379:6379 --name redis redis:latest
