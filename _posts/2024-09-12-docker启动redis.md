@@ -4,6 +4,9 @@ title: docker启动redis
 categories: [ docker, redis ]
 ---
 
+<br>
+<br>
+
 ### 前言
 
 - 有项目使用redis, 本来想在阿里云直接购买云redis, 但是发现阿里云价格不便宜, 所以决定使用docker部署redis.

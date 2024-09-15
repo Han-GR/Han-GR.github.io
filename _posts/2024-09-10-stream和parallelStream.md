@@ -4,6 +4,9 @@ title: stream和parallelStream
 categories: [ java, stream, parallelStream, 踩坑 ]
 ---
 
+<br>
+<br>
+
 ### stream()和parallelStream()
 
 - Java 8引入了Stream API, 它提供了一种高效且易于使用的处理数据的方式. Stream
