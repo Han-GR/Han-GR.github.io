@@ -5,7 +5,6 @@ categories: [ java, stream, parallelStream, 踩坑 ]
 ---
 
 <br>
-<br>
 
 ### stream()和parallelStream()
 

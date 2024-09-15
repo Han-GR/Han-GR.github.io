@@ -5,7 +5,6 @@ categories: [ Java, maven, Docker, 后端 ]
 ---
 
 <br>
-<br>
 
 ```dockerfile
 # 自己制作的 jdk21 + mvn3.9.9 的 Docker 镜像
