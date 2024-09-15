@@ -18,7 +18,7 @@ categories: [ java, swagger, knife4j, 接口文档 ]
 <br>
 <br>
 
-#### 接口文档的作用
+### 接口文档的作用
 
 1. 有个书面内容(背书或者归档), 便于大家参考和查阅, 便于沉淀和维护, 拒绝口口相传
 2. 接口文档便于前端和后端开发对接, 前后端联调的介质. 后端 => 接口文档 <= 前端
@@ -27,7 +27,7 @@ categories: [ java, swagger, knife4j, 接口文档 ]
 <br>
 <br>
 
-#### 怎么做接口文档？
+### 怎么做接口文档？
 
 1. 手写(比如腾讯文档、Markdown 笔记)
 2. 自动化接口文档生成: 自动根据项目代码生成完整的文档或在线调试的网页.
@@ -37,8 +37,6 @@ categories: [ java, swagger, knife4j, 接口文档 ]
 <br>
 
 ### Swagger和Knife4j
-
-<br>
 
 #### 1. Swagger
 
@@ -55,8 +53,6 @@ categories: [ java, swagger, knife4j, 接口文档 ]
 <br>
 
 ### 如何使用 Knife4j
-
-<br>
 
 #### 1. 引入依赖
 

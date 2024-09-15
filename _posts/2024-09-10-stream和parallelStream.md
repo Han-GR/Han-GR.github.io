@@ -61,7 +61,7 @@ categories: [ java, stream, parallelStream, 踩坑 ]
 
 #### 解决方案
 
-1. 异步处理: 使用 CompletableFuture 或其他异步编程模型来处理第三方API的调用, 避免阻塞主线程或其他工作线程
+1.异步处理: 使用 CompletableFuture 或其他异步编程模型来处理第三方API的调用, 避免阻塞主线程或其他工作线程
 
 ```java
 List<CompletableFuture<Response>> futures = apiUrls.stream()
@@ -73,7 +73,7 @@ CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).join();
 
 <br>
 
-2. 自定义线程池: 为不同的任务类型创建不同的线程池, 避免所有任务共享同一个线程池导致的资源竞争问题.
+2.自定义线程池: 为不同的任务类型创建不同的线程池, 避免所有任务共享同一个线程池导致的资源竞争问题.
 
 ```java
 ExecutorService apiExecutor = Executors.newFixedThreadPool(10);
@@ -88,7 +88,7 @@ CompletableFuture<Result> computeFuture = CompletableFuture.supplyAsync(() -> co
 
 <br>
 
-3. ManagedBlocker: 在某些情况下, 可以使用 ManagedBlocker 来帮助 ForkJoinPool 管理阻塞操作, 确保线程池的线程不会被完全阻塞.
+3.ManagedBlocker: 在某些情况下, 可以使用 ManagedBlocker 来帮助 ForkJoinPool 管理阻塞操作, 确保线程池的线程不会被完全阻塞.
 
 ```java
 class ApiBlocker implements ManagedBlocker {
@@ -122,7 +122,10 @@ ForkJoinPool.managedBlock(new ApiBlocker(url));
 
 <br>
 
-4. 避免长时间运行的函数: 在 ParallelStream() 中尽量避免使用长时间运行的函数, 或者将这些函数拆分成更小的任务, 以减少对线程池的影响.
+4.避免长时间运行的函数: 在 ParallelStream() 中尽量避免使用长时间运行的函数, 或者将这些函数拆分成更小的任务, 以减少对线程池的影响.
+
+<br>
+<br>
 
 #### 总结
 
