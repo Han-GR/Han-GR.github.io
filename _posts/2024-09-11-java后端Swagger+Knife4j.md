@@ -7,25 +7,25 @@ categories: [ java, swagger, knife4j, 接口文档 ]
 ### 接口文档
 
 - 接口文档是用来描述 API 的详细信息, 包括:
-- 请求参数
-- 响应参数(错误码)
-- 接口地址
-- 接口名称
-- 请求类型
-- 请求格式
-- 备注
+  - 请求参数
+  - 响应参数(错误码)
+  - 接口地址
+  - 接口名称
+  - 请求类型
+  - 请求格式
+  - 备注
 
 #### 接口文档的作用
 
-- 有个书面内容(背书或者归档), 便于大家参考和查阅, 便于沉淀和维护, 拒绝口口相传
-- 接口文档便于前端和后端开发对接, 前后端联调的介质. 后端 => 接口文档 <= 前端
-- 好的接口文档支持在线调试和在线测试, 可以作为工具提高我们的开发测试效率
+1. 有个书面内容(背书或者归档), 便于大家参考和查阅, 便于沉淀和维护, 拒绝口口相传
+2. 接口文档便于前端和后端开发对接, 前后端联调的介质. 后端 => 接口文档 <= 前端
+3. 好的接口文档支持在线调试和在线测试, 可以作为工具提高我们的开发测试效率
 
 #### 怎么做接口文档？
 
-- 手写(比如腾讯文档、Markdown 笔记)
-- 自动化接口文档生成: 自动根据项目代码生成完整的文档或在线调试的网页.
-- 工具: Swagger, Postman(侧重接口管理)(国外); apifox、apipost、eolink(国产)
+1. 手写(比如腾讯文档、Markdown 笔记)
+2. 自动化接口文档生成: 自动根据项目代码生成完整的文档或在线调试的网页.
+3. 工具: Swagger, Postman(侧重接口管理)(国外); apifox、apipost、eolink(国产)
 
 ### Swagger和Knife4j
 
@@ -51,7 +51,7 @@ categories: [ java, swagger, knife4j, 接口文档 ]
 </dependency>
 ```
 
-- 定义配置类WebMvcConfig
+#### 2. 定义配置类WebMvcConfig
 
 ```java
 package com.hjx.ucback.config;
@@ -85,7 +85,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 }
 ```
 
-#### 2. 定义Knife4j配置类
+#### 3. 定义Knife4j配置类
 
 ```java
 package com.hjx.ucback.config;
@@ -138,7 +138,7 @@ public class Knife4jConfig {
 }
 ```
 
-#### 3. 创建实体类
+#### 4. 创建实体类
 
 - @Schema 注解对实体类属性进行描述, 并添加到 @Schema 注解中.
 
@@ -157,7 +157,7 @@ public class UserVO implements Serializable {
     private String userName;
 ```
 
-#### 4. 创建controller:
+#### 5. 创建controller:
 
 - @Tag(name = “ ”) 标记 controller 的类别
 - @Operation(summary =“ ”) 标记接口操作
@@ -209,7 +209,7 @@ public class UserController {
     }
 ```
 
-#### 启动项目
+#### 6. 启动项目
 
 - 访问接口文档地址[http://localhost:8080/doc.html](http://localhost:8080/doc.html)
 - ![示例图](img.png)
