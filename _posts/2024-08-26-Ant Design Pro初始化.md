@@ -8,6 +8,8 @@ categories: [ Ant Design Pro, 前端, 用户中心项目 ]
 
 - 参考 [Ant Design Pro官网](https://pro.ant.design/zh-CN/docs/getting-started)
 
+<br>
+
 #### 1.初始化
 
 ```bash
@@ -15,6 +17,8 @@ categories: [ Ant Design Pro, 前端, 用户中心项目 ]
 npm i @ant-design/pro-cli -g
 pro create myapp
 ```
+
+<br>
 
 #### 2.选择 umi 的版本
 
@@ -34,6 +38,8 @@ pro create myapp
   complete
 ```
 
+<br>
+
 #### 3.安装依赖: 
 
 ```bash
@@ -42,10 +48,14 @@ $ cd myapp && tyarn
 $ cd myapp && npm install
 ```
 
+<br>
+
 #### 4.启动
 
 - 打开项目, 在 package.json 文件中找到 start 配置, 点击运行
 - ![运行](img.png)
+
+<br>
 
 #### 5.查看效果
 

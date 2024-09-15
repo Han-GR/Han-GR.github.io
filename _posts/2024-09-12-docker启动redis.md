@@ -8,11 +8,18 @@ categories: [ docker, redis ]
 
 - 有项目使用redis, 本来想在阿里云直接购买云redis, 但是发现阿里云价格不便宜, 所以决定使用docker部署redis.
 
+<br>
+<br>
+
 ### 步骤
+
+<br>
 
 #### 1. 安装docker
 
 - 可以查看之前的文章[docker安装](https://han-gr.github.io/posts/2024/08/31/docker%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98.html)
+
+<br>
 
 #### 2. 创建Dockerfile文件
 
@@ -29,6 +36,8 @@ EXPOSE 6379
 # 启动Redis并应用配置文件
 CMD ["sh", "-c", "redis-server /usr/local/etc/redis/redis.conf"]
 ```
+
+<br>
 
 #### 3. 创建redis.conf文件
 
@@ -51,11 +60,15 @@ maxmemory 2gb      # 最大内存
 maxmemory-policy noeviction     # 内存淘汰策略
 ```
 
+<br>
+
 #### 4. 构建镜像
 
 ```bash
 docker build -t redis:latest .
 ```
+
+<br>
 
 #### 5. 运行容器
 

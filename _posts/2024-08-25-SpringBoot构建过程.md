@@ -6,15 +6,21 @@ categories: [ SpringBoot, Java, 后端 ]
 
 ### 生成SpringBoot
 
+<br>
+
 #### 方式一
 
 - github 上搜索 SpringBoot 模板, 拉取现成模板(不推荐使用)
 - ![github搜索](img.png)
 
+<br>
+
 #### 方式二
 
 - SpringBoot 官方模板生成器([地址](https://start.spring.io/))
 - ![官方模板生成](img_1.png)
+
+<br>
 
 #### 方式三
 
