@@ -49,9 +49,11 @@ $ cd myapp && npm install
 4.启动
 
 - 打开项目, 在 package.json 文件中找到 start 配置, 点击运行
-  ![运行](img.png)
+<br>
+![运行](img.png)
 
 5.查看效果
 
 - 打开 [本地浏览器请求地址](http://localhost:8000/) 初始化完成
-  ![浏览器运行效果](img.png)
+<br>
+![浏览器运行效果](img.png)
