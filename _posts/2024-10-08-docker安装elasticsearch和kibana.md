@@ -17,10 +17,7 @@ categories: [ docker, elasticsearch, kibana ]
 
 - 我使用的Elasticsearch和Kibana的版本都是7.17.23, 因此需要拉取对应的镜像.
 - 但是国内现在没有办法直接拉取镜像了, 所以我通过一些方法把镜像上传到阿里云的容器镜像管理中
--
-
-使用的是开源项目: [https://github.com/tech-shrimp/docker_image_pusher](https://github.com/tech-shrimp/docker_image_pusher)
-
+- 使用的是开源项目: [https://github.com/tech-shrimp/docker_image_pusher](https://github.com/tech-shrimp/docker_image_pusher)
 - 按照该项目的说明将Elasticsearch和Kibana的镜像上传到阿里云镜像仓库, 也方便以后使用.
 - ![阿里云镜像仓库](img.png)
 
@@ -55,7 +52,7 @@ categories: [ docker, elasticsearch, kibana ]
        xpack.security.enabled: true  # 开启xpack安全插件
        xpack.security.transport.ssl.enabled: true  # 开启xpack安全插件的SSL
        ```
-    - 最后使用命令启动容器(为了解释方便, 我把命令分开写, 执行的时候其实是一条命令, 中间用空格隔开)
+    - 最后使用命令启动容器(为了解释方便, 我把命令分开写, 其实是一条命令, 中间用空格隔开)
        ```bash
        docker run -dit   # 后台运行容器
        --name es   # 容器名称
@@ -99,10 +96,10 @@ categories: [ docker, elasticsearch, kibana ]
        elasticsearch.hosts: [ "http://elasticsearch:9200" ]  # 设置Elasticsearch地址
        monitoring.ui.container.elasticsearch.enabled: true  # 开启监控
        i18n.locale: "zh-CN"  # 设置语言为中文
-       elasticsearch.username: "elastic"  # 设置用户名
+       elasticsearch.username: "xxxxxx"  # 设置用户名
        elasticsearch.password: "xxxxxxx"  # 设置密码
        ```
-    - 最后使用命令启动容器(为了解释方便, 我把命令分开写, 执行的时候其实是一条命令, 中间用空格隔开)
+    - 最后使用命令启动容器(为了解释方便, 我把命令分开写, 其实是一条命令, 中间用空格隔开)
        ```bash
        docker run -dit   # 后台运行容器
        --name kibana   # 容器名称
