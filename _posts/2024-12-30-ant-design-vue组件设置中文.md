@@ -8,7 +8,7 @@ categories: [ ant-design-vue, 组件, 中文 ]
 
 ### 背景
 
-- 在开发用户编辑生日功能的时候,使用到了ant-design-vue中的DatePicker组件,[DatePicker](https://2x.antdv.com/components/date-picker-cn/)
+- 在开发用户编辑生日功能的时候,使用到了`ant-design-vue`中的`DatePicker`组件,[DatePicker](https://2x.antdv.com/components/date-picker-cn/)
 
 - 但是组件的默认语言是英文,所以需要将组件的语言切换为中文.
 
