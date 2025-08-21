@@ -1,6 +1,6 @@
 ---
 layout: mypost
-title: prometheus-普罗米修斯应用
+title: prometheus-普罗米修斯学习应用
 categories: [ prometheus, 普罗米修斯 ]
 ---
 
