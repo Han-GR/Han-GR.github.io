@@ -8,7 +8,7 @@ categories: [ prometheus, 普罗米修斯 ]
 
 ### 背景
 
-- 网站 [Picazza](https://picazza.cn/) 上线之后, 虽然后台有记录日志, 但一直想弄个监控系统来监控网站的运行状态,
+- 网站 [Picazza](https://picazza.com/) 上线之后, 虽然后台有记录日志, 但一直想弄个监控系统来监控网站的运行状态,
   便学习了prometheus.
 
 <br>
