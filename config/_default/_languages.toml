@@ -1,7 +1,0 @@
-# 多语言配置模板：将本文件重命名为 languages.toml 后，多语言模式才会生效
-# Rename this file to languages.toml to enable multilingual support
-[en]
-    languageName      = "English"  # 语言显示名称
-    languagedirection = "ltr"      # 文本方向：ltr/rtl（阿拉伯语等用 rtl）
-    title             = "Example Site"  # 该语言下的站点标题
-    weight            = 1          # 语言排序权重（越小越靠前）
