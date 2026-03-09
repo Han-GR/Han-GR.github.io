@@ -2,9 +2,6 @@
 # Configure main menu and social menu
 # 侧边栏主菜单项：支持多个 [[main]] 块
 
-
-
-
 # 头像下方社交链接：支持多个 [[social]] 块
 [[social]]
     identifier = "github"       # GitHub 链接
