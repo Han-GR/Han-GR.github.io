@@ -1,18 +1,28 @@
+# 站点基础配置：站点 URL、语言、标题、分页等
 # Change baseurl before deploy
-baseurl      = "https://starter.stack.cai.im/"
-languageCode = "en-us"
-title        = "Hugo Theme Stack Starter"
+# 站点根地址（部署上线时需改为你的域名），用于生成绝对链接与资源路径
+baseurl      = "https://han-gr.github.io/"
+# 站点内容语言代码（影响日期/数字等本地化），示例：en-us、zh-cn
+languageCode = "zh-cn"
+# 站点标题（显示在浏览器标签与站点头部）
+title        = "HanGR的碎碎念"
 
+# 主题内置文案语言（theme i18n），用于切换“暗色模式/归档/搜索”等 UI 文案
 # Theme i18n support
 # See all available values at https://github.com/CaiJimmy/hugo-theme-stack/tree/master/i18n
+# 主题内置文案语言（影响暗色模式、归档、搜索等 UI 文案），例如：en、zh-cn、ja
 defaultContentLanguage = "zh"
 
+# 如果默认语言是中文/日文/韩文，建议设为 true，保证摘要与字数统计更准确
 # Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
 # This will make .Summary and .WordCount behave correctly for CJK languages.
-hasCJKLanguage = false
+# 启用中日韩语言特性（更准确的摘要与字数统计），中文/日文/韩文建议设为 true
+hasCJKLanguage = true
 
 # Change it to your Disqus shortname before using
+# Disqus 评论的站点短名（启用 Disqus 时必填）
 disqusShortname = "hugo-theme-stack"
 
-[pagination]
-    pagerSize = 5
+# 分页配置
+[pagination]                    # 配置分页行为的表
+    pagerSize = 8              # 每页文章数量

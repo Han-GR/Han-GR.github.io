@@ -1,2 +1,3 @@
+# Hugo Modules 配置：声明要引入的主题模块（此处为 hugo-theme-stack/v4）
 [[imports]]
-    path = "github.com/CaiJimmy/hugo-theme-stack/v4"
+    path = "github.com/CaiJimmy/hugo-theme-stack/v4"  # 主题模块路径（Go Modules）

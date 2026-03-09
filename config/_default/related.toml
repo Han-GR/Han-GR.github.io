@@ -1,9 +1,10 @@
+# 相关文章推荐配置：基于 tags/categories 等相似度计算
 # Related contents configuration
-includeNewer = true
-threshold    = 60
-toLower      = false
+includeNewer = true    # 包含较新的内容（即便发布时间晚）
+threshold    = 60      # 相似度阈值（越高越严格）
+toLower      = false   # 匹配时是否转为小写
 
 indices = [
-    { name = "tags", weight = 100 },
-    { name = "categories", weight = 200 },
+    { name = "tags", weight = 100 },        # 标签匹配的权重
+    { name = "categories", weight = 200 },  # 分类匹配的权重
 ]

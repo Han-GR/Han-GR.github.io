@@ -1,57 +1,58 @@
+# 主题参数（hugo-theme-stack）：控制侧边栏、组件、文章行为、配色方案等
 # Pages placed under these sections will be shown on homepage and archive page.
-mainSections = ["post"]
+mainSections = ["post"]         # 主页与归档页显示的内容类型（section）
 # Output page's full content in RSS.
-rssFullContent = true
-favicon        = "img/favicon.png"
+rssFullContent = true           # RSS 中是否输出全文
+favicon        = "img/favicon.png"  # 站点 favicon 路径
 
 # Accepted values: "default", "lastmod"
 # default = see https://gohugo.io/quick-reference/glossary/#default-sort-order
 # lastmod = sort by last modified date, in descending order
-SortBy              = "default"
+SortBy              = "default" # 文章列表排序方式：默认或按最后修改时间
 
 [footer]
-    since      = 2021
-    customText = ""
+    since      = 2021           # 页脚年份起始
+    customText = ""             # 页脚自定义文本
 
 [dateFormat]
-    published   = ":date_full"
-    lastUpdated = ":date_full"
+    published   = ":date_full"  # 发布时间格式
+    lastUpdated = ":date_full"  # 最近更新格式
 
 [sidebar]
-    emoji    = "♑️"
-    subtitle = "别想,去做!想,全是问题;做,全是方法"
-    avatar   = "img/avatar.png"
+    emoji    = "♑️"             # 侧边栏标题前的表情
+    subtitle = "别想,去做!想,全是问题;做,全是方法"  # 侧边栏副标题
+    avatar   = "img/avatar.png" # 头像图片路径
 
 [article]
-    headingAnchor = false
-    math          = false
-    readingTime   = true
+    headingAnchor = false        # 文章标题锚点（#）是否显示
+    math          = true        # 是否启用 LaTeX 数学公式
+    readingTime   = true         # 是否显示阅读时长
 
     [article.license]
-        enabled = false
-        default = "Licensed under CC BY-NC-SA 4.0"
+        enabled = false          # 是否显示版权声明模块
+        default = "Licensed under CC BY-NC-SA 4.0"  # 默认版权文案
 
 [widgets]
-    homepage = [
-        { type = "search" },
-        { type = "archives", params = { limit = 5 } },
-        { type = "categories", params = { limit = 10 } },
-        { type = "tag-cloud", params = { limit = 10 } },
+    homepage = [                 # 首页侧边栏组件顺序与参数
+        { type = "search" },     # 搜索组件
+        { type = "archives", params = { limit = 5 } },     # 归档组件，显示 5 项
+        { type = "categories", params = { limit = 10 } },  # 分类组件，显示 10 项
+        { type = "tag-cloud", params = { limit = 10 } },   # 标签云组件，显示 10 项
     ]
-    page = [{ type = "toc" }]
+    page = [{ type = "toc" }]    # 普通页面的侧边栏组件：目录（TOC）
 
 [opengraph.twitter]
-    site = ""
-    card = "summary_large_image"
+    site = ""                    # Twitter 用户名（@xxx）
+    card = "summary_large_image" # Twitter 卡片类型
 
 [colorScheme]
-    toggle  = true
-    default = "auto"
+    toggle  = true               # 是否显示明暗模式切换按钮
+    default = "auto"             # 默认配色：auto/ light/ dark
 
 ## Comments
 [comments]
-    enabled  = true
-    provider = "disqus"
+    enabled  = false              # 是否启用评论系统
+    provider = "disqus"          # 评论系统提供方（此处为 Disqus）
 
     # See all the available configurations at https://github.com/CaiJimmy/hugo-theme-stack/blob/master/config/_default/params.toml
     # Copy the configurations you need from there and paste it here.

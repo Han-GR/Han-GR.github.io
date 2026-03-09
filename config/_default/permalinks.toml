@@ -1,3 +1,4 @@
+# 永久链接格式：控制 post/page 等内容类型的 URL 结构
 # Permalinks format of each content section
-post = "/p/:slug/"
-page = "/:slug/"
+post = "/p/:slug/"   # 文章 URL 使用 /p/<slug> 结构
+page = "/:slug/"     # 页面 URL 使用 /<slug> 结构

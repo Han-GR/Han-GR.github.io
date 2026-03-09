@@ -1,67 +1,70 @@
+# 菜单配置：main 为侧边栏主菜单，social 为头像下方社交链接
 # Configure main menu and social menu
+# 侧边栏主菜单项：支持多个 [[main]] 块
 [[main]]
-    identifier = "home"
-    name = "首页"
-    url = "/"
-    weight = 10
+    identifier = "home"        # 菜单唯一标识，用于合并与排序
+    name = "首页"               # 显示名称（可本地化）
+    url = "/"                   # 点击跳转的相对路径
+    weight = 10                 # 排序权重，数字越小越靠前
     [main.params]
-        icon = "home"
-        newtab = false
+        icon = "home"           # 图标名称，对应 assets/icons/home.svg
+        newtab = false          # 是否新窗口打开
 
 [[main]]
-    identifier = "categories"
+    identifier = "categories"   # 分类页入口
     name = "分类"
     url = "/categories/"
     weight = 20
     [main.params]
-        icon = "categories"
+        icon = "categories"     # 对应 assets/icons/categories.svg（需自备同名 SVG）
 
 [[main]]
-    identifier = "archives"
+    identifier = "archives"     # 归档页入口
     name = "归档"
     url = "/archives/"
     weight = 30
     [main.params]
-        icon = "archives"
+        icon = "archives"       # 对应 assets/icons/archives.svg（需自备同名 SVG）
 
 [[main]]
-    identifier = "tags"
+    identifier = "tags"         # 标签页入口
     name = "标签"
     url = "/tags/"
     weight = 40
     [main.params]
-        icon = "tag"
+        icon = "tag"            # 对应 assets/icons/tag.svg
 
 [[main]]
-    identifier = "links"
+    identifier = "links"        # 友链页入口
     name = "友链"
     url = "/links/"
     weight = 50
     [main.params]
-        icon = "link"
+        icon = "link"           # 对应 assets/icons/link.svg
 
 [[main]]
-    identifier = "about"
+    identifier = "about"        # 关于页入口
     name = "关于"
     url = "/about/"
     weight = 70
     [main.params]
-        icon = "user"
+        icon = "user"           # 对应 assets/icons/user.svg
 
 
 
+# 头像下方社交链接：支持多个 [[social]] 块
 [[social]]
-    identifier = "github"
+    identifier = "github"       # GitHub 链接
     name       = "GitHub"
     url        = "https://github.com/CaiJimmy/hugo-theme-stack"
 
     [social.params]
-        icon = "brand-github"
+        icon = "brand-github"   # 使用品牌图标：assets/icons/brand-github.svg
 
 [[social]]
-    identifier = "email"
+    identifier = "email"        # 邮箱链接，mailto: 协议
     name       = "邮件"
     url        = "mailto:han_gr@foxmail.com"
 
     [social.params]
-        icon = "mail"
+        icon = "mail"           # 对应 assets/icons/mail.svg

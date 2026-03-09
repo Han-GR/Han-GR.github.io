@@ -1,26 +1,27 @@
+# Markdown 渲染与代码高亮配置：Goldmark、TOC、highlight 等
 # Markdown renderer configuration
 [goldmark.renderer]
-    unsafe = true
+    unsafe = true               # 允许在 Markdown 中渲染原生 HTML（默认关闭）
 
 [goldmark.extensions.passthrough]
-    enable = true
+    enable = true               # 启用文本直通扩展（用于数学公式）
 
     # LaTeX math support
     # https://gohugo.io/content-management/mathematics/
     [goldmark.extensions.passthrough.delimiters]
-        block  = [['\[', '\]'], ['$$', '$$']]
-        inline = [['\(', '\)']]
+        block  = [['\[', '\]'], ['$$', '$$']]  # 行间公式定界符
+        inline = [['\(', '\)']]                 # 行内公式定界符
 
 [tableOfContents]
-    endLevel   = 4
-    ordered    = true
-    startLevel = 2
+    endLevel   = 4              # 目录最大层级
+    ordered    = true           # 是否使用有序列表
+    startLevel = 2              # 目录起始层级（从 H2 开始）
 
 [highlight]
-    noClasses          = false
-    codeFences         = true
-    guessSyntax        = true
-    lineNoStart        = 1
-    lineNos            = true
-    lineNumbersInTable = true
-    tabWidth           = 4
+    noClasses          = false  # 使用 CSS 类而非内联样式（便于主题定制）
+    codeFences         = true   # 支持 ``` fenced code block
+    guessSyntax        = true   # 自动猜测代码语言
+    lineNoStart        = 1      # 行号起始
+    lineNos            = true   # 是否显示行号
+    lineNumbersInTable = true   # 行号表格样式
+    tabWidth           = 4      # 制表符宽度
