@@ -16,9 +16,9 @@
         icon = "brand-github"
 
 [[social]]
-    identifier = "twitter"
-    name       = "Twitter"
-    url        = "https://twitter.com"
+    identifier = "email"
+    name       = "邮件"
+    url        = "mailto:han_gr@foxmail.com"
 
     [social.params]
-        icon = "brand-twitter"
+        icon = "mail"
