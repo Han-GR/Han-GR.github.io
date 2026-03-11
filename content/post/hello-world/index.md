@@ -6,8 +6,20 @@ date: 2022-03-06 00:00:00+0000
 image: cover.jpg
 categories:
     - Example Category
+    - 编程语言
+    - 测试
+    - 后端
+    - 架构设计
+    - 前端
+    - 数据库&缓存
+    - 算法&计算机基础
+    - 效率&工具
+    - 运维&云原生
+    - AI&数据
 tags:
     - Example Tag
+    - 测试
+    - python
 weight: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
 
