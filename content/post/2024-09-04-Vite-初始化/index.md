@@ -1,0 +1,97 @@
+---
+title: "Vite 初始化"
+description: ""
+slug: 2024-09-04-Vite-初始化
+date: 2024-09-04
+image: ""
+categories:
+  - "前端"
+tags:
+  - "Vite"
+  - "Vant"
+  - "Vue"
+---
+
+### Vite
+
+- Vite(法语意为 "快速的", 发音 /vit/, 发音同 "veet")是一种新型前端构建工具, 能够显著提升前端开发体验.
+- [Vite官网](https://www.vitejs.net/)
+
+
+### 初始化 Vite 项目
+
+- 个人喜欢用yarn
+
+    ```bash
+    yarn create vite
+    ```
+
+
+### Vant
+
+- Vant 是一个轻量、可定制的移动端组件库
+- [Vant官网](https://vant.pro/vant/#/zh-CN/home)
+
+
+### 安装Vant
+
+    ```bash
+    # Vue 3 项目, 安装最新版 Vant
+    npm i vant
+    
+    # Vue 2 项目, 安装 Vant 2
+    npm i vant@latest-v2
+    
+    # 通过 yarn 安装
+    yarn add vant
+    
+    # 通过 pnpm 安装
+    pnpm add vant
+    
+    # 通过 Bun 安装
+    bun add vant
+    ```
+
+
+### 在Vite项目中使用Vant
+
+1. 安装插件
+
+    ```bash
+    # 通过 npm 安装
+    npm i @vant/auto-import-resolver unplugin-vue-components unplugin-auto-import -D
+    
+    # 通过 yarn 安装
+    yarn add @vant/auto-import-resolver unplugin-vue-components unplugin-auto-import -D
+    
+    # 通过 pnpm 安装
+    pnpm add @vant/auto-import-resolver unplugin-vue-components unplugin-auto-import -D
+    
+    # 通过 bun 安装
+    bun add @vant/auto-import-resolver unplugin-vue-components unplugin-auto-import -D
+    ```
+
+2. 基于 Vite 的项目, 在 vite.config.js 文件中配置插件
+
+    ```js
+    import vue from '@vitejs/plugin-vue';
+    import AutoImport from 'unplugin-auto-import/vite';
+    import Components from 'unplugin-vue-components/vite';
+    import {VantResolver} from '@vant/auto-import-resolver';
+    
+    export default {
+        plugins: [
+            vue(),
+            AutoImport({
+                resolvers: [VantResolver()],
+            }),
+            Components({
+                resolvers: [VantResolver()],
+            }),
+        ],
+    };
+    ```
+
+
+
+

@@ -1,0 +1,211 @@
+---
+title: "redis知识"
+description: ""
+slug: 2024-09-14-redis知识
+date: 2024-09-14
+image: ""
+categories:
+  - "后端"
+tags:
+  - "redis"
+  - "Spring Data"
+  - "Spring Data Redis"
+---
+
+### Redis
+
+- NoSQL数据库, 区别于关系型数据库, redis是一种基于键值对的存储数据库, 提供高性能的读写操作.
+- Redis是一个开源的高性能的键值对数据库, 它支持多种数据结构, 如字符串, 哈希, 列表, 集合, 有序集合等.
+
+
+### 数据类型
+
+- **String**
+    - 字符串类型, 用于存储字符串数据, 最大容量为512M.
+    - name: John
+- **Hash**
+    - 哈希类型, 用于存储键值对, 类似于Java中的HashMap, 可以存储二进制数据.
+    - user: {name: John, age: 25, gender: male}
+- **List**
+    - 列表类型, 用于存储多个字符串, 按照插入顺序排序.
+    - shopping_cart: [apple, orange, banana]
+- **Set**
+    - 集合类型, 用于存储多个字符串, 无序且不重复.
+    - visited_users: {user1, user2, user3}
+- **Sorted Set**
+    - 有序集合类型, 用于存储多个字符串, 按照分数排序.
+    - top_users: {user1: 90, user2: 80, user3: 70}
+- **ZSet** (Sorted Set的升级版)
+    - 与Sorted Set类似, 但是可以存储成员的分数, 用于实现带权重的排序, 适合做排行榜.
+    - top_users: {user1: 90, user2: 80, user3: 70}
+
+
+### 高级数据结构
+
+- **HyperLogLog**
+    - HyperLogLog是一种基数估计算法, 用于估计集合中不重复元素的数量.
+    - 优点: 计算速度非常快, 占用内存很小, 误差率在1%以内.
+    - 缺点: 不能删除元素, 只能添加元素.
+    - 应用场景: 统计网站的 UV 值, 商品访问量, 去重计数等.
+- **Geo**
+    - Geo是Redis的地理位置数据类型, 用于存储地理位置信息, 如经纬度, 城市名称等.
+    - 优点: 存储空间小, 查询速度快.
+    - 缺点: 不能删除元素, 只能添加元素.
+    - 应用场景: 存储用户的地理位置信息, 实现附近的人搜索, 附近的地铁站等.
+- **bloom filter**
+    - bloom filter是一种数据结构, 用于判断元素是否存在于集合中.
+    - 优点: 空间效率高, 查询速度快.
+    - 缺点: 有一定的误识别率, 误判率为1/1000.
+    - 应用场景: 用于判断大数据集合中是否存在某个元素, 如垃圾邮件过滤, 网页爬虫去重等.
+- **pub/sub**
+    - pub/sub是Redis的消息发布/订阅系统, 用于实现一对多的消息发布与订阅.
+    - 优点: 实现简单, 性能高.
+    - 缺点: 不能保证消息的顺序.
+    - 应用场景: 实现聊天室, 通知系统, 实时消息推送等.
+- **bitmap**
+    - bitmap是一种数据结构, 用于存储二进制数据, 如用户签到, 商品访问等.
+    - 优点: 占用内存小, 存储空间大.
+    - 缺点: 查询速度慢.
+    - 应用场景: 用于统计活跃用户, 商品访问统计, 黑名单过滤等.
+
+
+### 应用场景
+
+1. 缓存: Redis可以用作缓存, 降低数据库的查询压力, 提升响应速度.
+
+2.  计数器: Redis可以用作计数器, 如用户访问计数, 商品销量统计等.
+
+3. 排行榜: Redis可以用作排行榜, 如热门商品排行榜, 高分榜等.
+
+4. 发布/订阅: Redis可以用作消息队列, 发布者发布消息, 消费者接收消息.
+
+5. 任务队列: Redis可以用作任务队列, 将耗时的任务放入队列, 异步执行.
+
+6. 全文搜索: Redis可以用作全文搜索, 存储大量文本数据, 提供搜索功能.
+
+7. 地理位置: Redis可以用作地理位置, 存储经纬度信息, 实现地理位置信息的查找.
+
+
+### java里如何使用Redis?
+
+1. 介绍Java中常用的redis客户端
+
+   - java中有多种Redis客户端, 我们可以根据自己的业务场景选择适合的客户端.
+   - (1) Spring Data Redis(推荐): 基于Spring的Redis客户端, 封装了Redis操作的常用方法.
+   - (2) Jedis: 一个独立于Spring的Redis客户端, 实现了Redis命令的封装.
+   - (3) Lettuce: 一个Redis客户端, 实现了Redis命令的异步封装, 高阶操作.
+   - (4) Redisson: 一个分布式的Redis客户端, 可以像使用本地集合一样操作Redis, 支持分布式锁等高级功能.
+
+2. 介绍Spring Data 和 Spring Data Redis
+
+   - Spring Data 是通用的数据访问框架,定义了一组增删改查的接口,支持操作Redis, MySQL, MongoDB, jpa等.
+   - Spring Data Redis 是 Spring Data 的子项目, 封装了Redis操作的常用方法, 简化了Redis的使用.
+
+3. 各种客户端使用场景
+
+   - 如果项目用的是 Spring, 并且没有过多的定制化要求, 可以用 Spring Data Redis, 最方便
+   - 如果项目用的不是 Spring, 并且追求简单, 并且没有过高的性能要求, 可以用 Jedis + Jedis Pool
+   - 如果项目用的不是 Spring, 并且追求高性能、高定制化, 可以用 Lettuce, 支持异步、连接池
+   - 如果你的项目是分布式的, 需要用到一些分布式的特性（比如分布式锁、分布式集合）, 推荐用 redisson
+
+
+### Spring Data Redis 的使用
+
+1. 引入依赖
+
+    ```xml
+    <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-redis -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-redis</artifactId>
+        <version>3.3.2</version>
+    </dependency>
+    ```
+
+2. 配置Redis
+
+    ```yml
+      # redis 配置
+      spring:
+        data:
+          redis:
+            host: localhost   # redis主机
+            port: 6379    # redis端口
+            database: 0   # redis数据库
+            password: xxxxxxxx    # redis密码 非必填
+    ```
+
+3. 使用Redis
+
+   - (1) 配置 RedisTemplate 序列化
+
+    ```java
+    @Configuration
+    public class RedisTemplateConfig {
+    
+        @Bean
+        public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory connectionFactory) {
+            //创建RedisTemplate对象
+            RedisTemplate<String, Object> redisTemplate = new RedisTemplate<>();
+            //设置连接工厂
+            redisTemplate.setConnectionFactory(connectionFactory);
+            //设置Key的序列化
+            redisTemplate.setKeySerializer(RedisSerializer.string());
+    
+            //创建Json序列化工具
+            GenericJackson2JsonRedisSerializer jsonRedisSerializer = new GenericJackson2JsonRedisSerializer();
+            //设置Value的序列化
+            redisTemplate.setValueSerializer(jsonRedisSerializer);
+    
+            return redisTemplate;
+        }
+    }
+    ```
+
+   - (2) 注入 RedisTemplate
+
+    ```java
+    @SpringBootTest
+    public class RedisTest {
+    
+        @Resource
+        private RedisTemplate redisTemplate;
+    
+        @Test
+        public void test() {
+            ValueOperations valueOperations = redisTemplate.opsForValue();
+            // 增
+            valueOperations.set("testString", "测试");
+            valueOperations.set("testInt", 1);
+            valueOperations.set("testDouble", 2.0);
+            User user = new User();
+            user.setId(0L);
+            user.setUserName("xxxxxx");
+            valueOperations.set("testUser", user);
+    
+            // 查
+            Object test = valueOperations.get("testString");
+            Assertions.assertTrue("测试".equals((String) test));
+            test = valueOperations.get("testInt");
+            Assertions.assertTrue(1 == (Integer) test);
+            test = valueOperations.get("testDouble");
+            Assertions.assertTrue(2.0 == (Double) test);
+            System.out.println(valueOperations.get("testUser"));
+    
+            // 改
+            valueOperations.set("testUser", user);
+    
+            // 删
+            redisTemplate.delete("testString");
+    
+        }
+    }
+    ```
+
+
+### 参考
+
+- [Redis官网](https://redis.io/)
+- [Redis中文网](http://redis.cn/)
+- [Redis命令参考](https://redis.io/commands)
+- [Redis教程](https://www.runoob.com/redis/redis-tutorial.html)

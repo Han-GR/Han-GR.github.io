@@ -1,0 +1,42 @@
+---
+title: "浏览器扩展插件开发(一)"
+description: ""
+slug: 2024-11-13-浏览器扩展插件开发(一)
+date: 2024-11-13
+image: ""
+categories:
+  - "前端"
+tags:
+  - "浏览器扩展"
+  - "Auto Tab Grouper"
+---
+
+### 背景
+
+- 最近使用浏览器的时候,总是打开很多网页,顶部的标签栏很乱,想着能不能做一个浏览器插件,可以整理好标签栏,把标签栏分组,看起来更整洁。
+- 网上查了一下, 有现成的插件, 但是我觉得我需要的功能好像挺简单的, 想自己写一个。
+- 于是,我开始了浏览器插件开发之旅。
+
+
+### 开发过程
+
+- 我第一次接触浏览器插件开发, 也是从网上找资料开始的, 先了解一下相关知识
+- 浏览器本身就有标签页分组功能,我只需要在原生的分组功能上改动即可
+- 最后,我成功的开发了一个浏览器插件,可以整理好标签栏,把标签栏分组,看起来更整洁。
+- 可自动根据网站域名分组
+    - ![image](assets/file-20260310211251426.png)
+- 可自定义分组名称
+    - ![image](assets/file-20260310211216401.png)
+
+
+### 发布
+
+- 插件写好了, 我也发布在了浏览器商店里, 也不指望别人用, 就是喜欢折腾
+- 下载地址: [edge浏览器](
+  https://microsoftedge.microsoft.com/addons/detail/homfgnajmdcljeincjmhmpmhaflomcbg)
+- 下载地址: [chrome浏览器](https://chromewebstore.google.com/detail/auto-tab-grouper/jbeppelpehlbplbdhkdicfkklmjlpgaf)
+
+### 项目地址
+
+- [Auto Tab Grouper](https://github.com/Han-GR/Browser-Extensions/tree/master/Auto%20Tab%20Grouper)
+- 以后再有什么有意思的想法,也会尝试开发,放到这个插件合集中
