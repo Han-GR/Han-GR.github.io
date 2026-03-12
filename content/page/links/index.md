@@ -1,5 +1,6 @@
 ---
 title: 友链
+slug: "links"
 links:
   - title: HanGR
     description: HanGR的碎碎念.
