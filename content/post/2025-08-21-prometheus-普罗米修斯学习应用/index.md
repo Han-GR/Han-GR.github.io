@@ -135,7 +135,7 @@ tags:
 #### 准备镜像
 
 - 国内现在没有办法直接拉取镜像了, 所以我把镜像上传到阿里云的容器镜像管理中
-- 我在之前的文章里介绍过,详情参考 [docker安装elasticsearch和kibana](https://han-gr.github.io/posts/2024/10/08/docker%E5%AE%89%E8%A3%85elasticsearch%E5%92%8Ckibana.html)
+- 我在之前的文章里介绍过,详情参考 [docker安装elasticsearch和kibana](https://han-gr.github.io/p/2024-10-08-docker%E5%AE%89%E8%A3%85-elasticsearch-%E4%B8%8E-kibana/)
 
 #### 编写配置文件
 

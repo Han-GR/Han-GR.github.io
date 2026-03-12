@@ -33,7 +33,7 @@ tags:
 
 - 在分布式缓存中, Redis是最常用的缓存服务器.
 - 了解redis的基本概念和使用方法,
-  可以查看文章: [redis知识](https://han-gr.github.io/posts/2024/09/14/redis%E7%9F%A5%E8%AF%86.html)
+  可以查看文章: [redis知识](https://han-gr.github.io/p/2024-09-14-redis%E7%9F%A5%E8%AF%86/)
 
 
 ### 使用Redis缓存注意事项

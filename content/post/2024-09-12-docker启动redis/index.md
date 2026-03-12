@@ -20,7 +20,7 @@ tags:
 
 1. 安装docker
 
-   - 可以查看文章: [docker安装](https://han-gr.github.io/posts/2024/08/31/docker%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98.html)
+   - 可以查看文章: [docker安装](https://han-gr.github.io/p/2024-08-31-docker-%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/)
 
 2. 创建Dockerfile文件
 

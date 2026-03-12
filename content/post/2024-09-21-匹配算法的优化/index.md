@@ -14,7 +14,7 @@ tags:
 
 ## 背景
 
-核心算法是编辑距离，相关笔记：<https://han-gr.github.io/posts/2024/09/21/%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95.html>
+核心算法是编辑距离，相关笔记：<https://han-gr.github.io/p/2024-09-21-%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/>
 
 ## 使用场景
 
