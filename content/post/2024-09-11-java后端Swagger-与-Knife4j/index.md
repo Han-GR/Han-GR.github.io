@@ -10,175 +10,133 @@ tags:
   - "Java"
   - "swagger"
   - "knife4j"
-  - "接口文档"
 ---
-<br>
+这篇记录在 Java 后端项目里接入 Swagger / Knife4j，生成可在线调试的接口文档。
 
-### 接口文档
+## 接口文档是什么
 
-- 接口文档是用来描述 API 的详细信息, 包括:
-    - 请求参数
-    - 响应参数(错误码)
-    - 接口地址
-    - 接口名称
-    - 请求类型
-    - 请求格式
-    - 备注
+接口文档用来描述 API 的关键要素：
 
-<br>
+- 请求参数
+- 响应结构（错误码）
+- 接口地址 / 名称
+- 请求方法 / 格式
+- 备注
 
-### 接口文档的作用
+## 接口文档的作用
 
-1. 有个书面内容(背书或者归档), 便于大家参考和查阅, 便于沉淀和维护, 拒绝口口相传
+- 便于归档与查阅，减少“口口相传”
+- 作为前后端对接介质（后端 → 文档 ← 前端）
+- 支持在线调试，提升联调效率
 
-2. 接口文档便于前端和后端开发对接, 前后端联调的介质. 后端 => 接口文档 <= 前端
+## 常见做法
 
-3. 好的接口文档支持在线调试和在线测试, 可以作为工具提高我们的开发测试效率
+- 手写：腾讯文档、Markdown
+- 自动生成：根据代码生成文档 / 调试页
+- 工具：Swagger、Postman；Apifox / Apipost / Eolink
 
-<br>
+## Swagger 与 Knife4j
 
-### 怎么做接口文档？
+- Swagger：开源 API 文档生成工具
+- Knife4j：基于 Swagger 的增强版，UI 更好、功能更全，支持导出 HTML/Markdown/Word/PDF
 
-1. 手写(比如腾讯文档、Markdown 笔记)
+## Knife4j 接入步骤
 
-2. 自动化接口文档生成: 自动根据项目代码生成完整的文档或在线调试的网页.
+### 1) 引入依赖
 
-3. 工具: Swagger, Postman(侧重接口管理)(国外); apifox、apipost、eolink(国产)
+```xml
+<dependency>
+    <groupId>com.github.xiaoymin</groupId>
+    <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
+    <version>4.5.0</version>
+</dependency>
+```
 
-<br>
+### 2) 配置静态资源映射（WebMvcConfig）
 
-### Swagger和Knife4j
+```java
+package com.hjx.ucback.config;
 
-1. Swagger
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-   - Swagger 是一款开源的 API 文档生成工具, 它可以帮助我们自动生成 API 文档, 并通过 Swagger UI 进行展示.
+@Configuration
+public class WebMvcConfig implements WebMvcConfigurer {
 
-2. Knife4j
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/static/**")
+                .addResourceLocations("classpath:/static/");
+        registry.addResourceHandler("/doc.html")
+                .addResourceLocations("classpath:/META-INF/resources/");
+        registry.addResourceHandler("/webjars/**")
+                .addResourceLocations("classpath:/META-INF/resources/webjars/");
+    }
+}
+```
 
-   - Knife4j 是一款基于 Swagger 的 API 文档生成工具, 它可以帮助我们自动生成 API 文档, 并通过 Swagger UI 进行展示.
-   - Knife4j 界面更漂亮, 功能更强大, 而且支持导出 HTML、Markdown、Word、PDF 等多种格式的文档, 所以推荐使用 Knife4j.
+### 3) Knife4j 配置（Knife4jConfig）
 
-<br>
+```java
+package com.hjx.ucback.config;
 
-### 如何使用 Knife4j
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Contact;
+import io.swagger.v3.oas.models.info.Info;
+import org.springdoc.core.models.GroupedOpenApi;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-1. 引入依赖
+@Configuration
+public class Knife4jConfig {
 
-    ```xml
-    
-    <dependency>
-        <groupId>com.github.xiaoymin</groupId>
-        <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
-        <version>4.5.0</version>
-    </dependency>
-    ```
+    private static final String API_INFO_TITLE = "接口文档";
+    private static final String API_INFO_VERSION = "V1.0";
+    private static final String API_INFO_DESCRIPTION = "用户中心接口文档";
 
-2. 定义配置类WebMvcConfig
+    @Bean
+    public GroupedOpenApi UserOpenApi() {
+        return GroupedOpenApi.builder()
+                .group("UserApi")
+                .displayName("用户模块")
+                .pathsToMatch("/**")
+                .packagesToScan("com.hjx.ucback.controller")
+                .build();
+    }
 
-    ```java
-    package com.hjx.ucback.config;
-    
-    import org.springframework.context.annotation.Configuration;
-    import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-    import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-    
+    @Bean
+    public OpenAPI openAPI() {
+        return new OpenAPI()
+                .info(new Info()
+                        .title(API_INFO_TITLE)
+                        .description(API_INFO_DESCRIPTION)
+                        .version(API_INFO_VERSION)
+                        .contact(new Contact().name("HanGR"))
+                );
+    }
+}
+```
+
+### 4) 实体类注解（Schema）
+
+```java
+@Schema(description = "用户视图（脱敏）")
+public class UserVO implements Serializable {
+
     /**
-     * Author: HanGR
-     * Project: uc-back
-     * Date: 2024/9/11 21:40
-     * Realize:
+     * id
      */
-    @Configuration
-    public class WebMvcConfig implements WebMvcConfigurer {
-    
-        /**
-         * 设置静态资源映射
-         */
-        @Override
-        public void addResourceHandlers(ResourceHandlerRegistry registry) {
-            // 添加静态资源映射规则
-            registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
-            //配置 knife4j 的静态资源请求映射地址
-            registry.addResourceHandler("/doc.html")
-                    .addResourceLocations("classpath:/META-INF/resources/");
-            registry.addResourceHandler("/webjars/**")
-                    .addResourceLocations("classpath:/META-INF/resources/webjars/");
-        }
-    }
-    ```
+    private Long id;
 
-3. 定义Knife4j配置类
-
-    ```java
-    package com.hjx.ucback.config;
-    
-    import io.swagger.v3.oas.models.OpenAPI;
-    import io.swagger.v3.oas.models.info.Contact;
-    import io.swagger.v3.oas.models.info.Info;
-    import org.springdoc.core.models.GroupedOpenApi;
-    import org.springframework.context.annotation.Bean;
-    import org.springframework.context.annotation.Configuration;
-    
-    
-    
     /**
-     * Author: HanGR
-     * Project: uc-back
-     * Date: 2024/9/11 19:08
-     * Realize:
+     * 用户昵称
      */
-    
-    @Configuration
-    public class Knife4jConfig {
-    
-        private static final String API_INFO_TITLE = "接口文档";    // 接口文档标题
-        private static final String API_INFO_VERSION = "V1.0";    // 接口文档版本
-        private static final String API_INFO_DESCRIPTION = "用户中心接口文档";  // 接口文档描述
-    
-    
-        @Bean
-        public GroupedOpenApi UserOpenApi() {
-            return GroupedOpenApi.builder()
-                    .group("UserApi")        // 接口分组名称
-                    .displayName("用户模块")    // 接口分组显示名称
-                    .pathsToMatch("/**")      // 匹配所有路径
-                    .packagesToScan("com.hjx.ucback.controller")    // 扫描的包路径
-                    .build();
-        }
-    
-    
-        @Bean
-        public OpenAPI openAPI() {
-            return new OpenAPI()
-                    .info(new Info()
-                            .title(API_INFO_TITLE)
-                            .description(API_INFO_DESCRIPTION)
-                            .version(API_INFO_VERSION)
-                            .contact(new Contact().name("HanGR"))
-                    );
-        }
-    }
-    ```
+    private Long id;
+}
+```
 
-4. 创建实体类
-
-   - 使用 @Schema 注解对实体类属性进行描述, 并添加到 @Schema 注解中.
-
-    ```java
-    @Schema(description = "用户视图（脱敏）")
-    public class UserVO implements Serializable {
-    
-        /**
-         * id
-         */
-        private Long id;
-    
-        /**
-         * 用户昵称
-         */
-        private Long id;
-    }
-    ```
+## 截图
 
 ![knife4j-1](assets/file-20260310210109160.png)
 ![knife4j-2](assets/file-20260310210123879.png)

@@ -9,55 +9,51 @@ categories:
 tags:
   - "Ant Design Pro"
 ---
-### 安装
+这篇记录一次 Ant Design Pro 的最小初始化流程：从脚手架创建到本地启动。
 
-- 参考 [Ant Design Pro官网](https://pro.ant.design/zh-CN/docs/getting-started)
+## 安装
 
-<br>
+- 参考文档：[Ant Design Pro 入门](https://pro.ant.design/zh-CN/docs/getting-started)
 
-### 使用
+## 使用
 
-1. 初始化
+### 1) 初始化项目
 
-    ```bash
-    # 使用 npm
-    npm i @ant-design/pro-cli -g
-    pro create myapp
-    ```
+```bash
+npm i @ant-design/pro-cli -g
+pro create myapp
+```
 
-2. 选择 umi 的版本
+### 2) 选择 umi 版本与模板
 
-    - 如果选择了 umi@4 版本, 暂时还不支持全量区块.
-    - 如果选择了 umi@3, 还可以选择 pro 的模板, pro 是基础模板, 只提供了框架运行的基本内容, complete 包含所有区块,
-      不太适合当基础模板来进行二次开发
+- umi@4：暂不支持全量区块
+- umi@3：可选 pro / complete 模板（complete 包含所有区块，不适合当基础模板二次开发）
 
-   ```
-   ? 🐂 使用 umi@4 还是 umi@3 ? (Use arrow keys)
-   ❯ umi@4
-   umi@3
-   ```
-   
-   ```
-   ? 🚀 要全量的还是一个简单的脚手架? (Use arrow keys)
-   ❯ simple
-   complete
-   ```
+```text
+? 🐂 使用 umi@4 还是 umi@3 ? (Use arrow keys)
+❯ umi@4
+  umi@3
+```
 
-3. 安装依赖:
+```text
+? 🚀 要全量的还是一个简单的脚手架? (Use arrow keys)
+❯ simple
+  complete
+```
 
-   ```bash
-   $ cd myapp && tyarn
-   // 或
-   $ cd myapp && npm install
-   ```
+### 3) 安装依赖
 
-4. 启动
+```bash
+cd myapp
+tyarn
+# 或
+npm install
+```
 
-    - 打开项目, 在 package.json 文件中找到 start 配置, 点击运行
-      <br>
-    - ![](assets/file-20260310211323237.png)
+### 4) 启动与验证
 
-5. 查看效果
-    - 打开 [本地浏览器请求地址](http://localhost:8000/) 初始化完成
-      <br>
-    - ![](assets/file-20260310211338522.png)
+- 启动：打开项目，在 package.json 里找到 start 脚本并运行
+- ![](assets/file-20260310211323237.png)
+
+- 验证：访问 http://localhost:8000/
+- ![](assets/file-20260310211338522.png)
