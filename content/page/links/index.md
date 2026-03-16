@@ -1,11 +1,11 @@
 ---
 title: 友链
 slug: "links"
-links:
-  - title: HanGR
-    description: HanGR的碎碎念.
-    website: https://han-gr.github.io
-    image: https://han-gr.github.io/img/avatar.png
+# links:
+#   - title: HanGR
+#     description: HanGR的碎碎念.
+#     website: https://han-gr.github.io
+#     image: https://han-gr.github.io/img/avatar.png
 menu:
     main: 
         name: 友链
