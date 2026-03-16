@@ -1,3 +1,40 @@
 /*
     You can add your own custom styles here.
 */
+
+.about-card {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--card-background, #fff);
+    border-radius: var(--card-border-radius, 16px);
+    box-shadow: var(--shadow-l1, 0 10px 30px rgba(0, 0, 0, 0.06));
+}
+
+.about-card > :first-child {
+    margin-top: 0;
+}
+
+.about-card > :last-child {
+    margin-bottom: 0;
+}
+
+.about-contact {
+    margin-top: 1.75rem;
+    padding: 1.5rem 1.75rem;
+    background: var(--blockquote-background, rgba(0, 0, 0, 0.04));
+    border-radius: var(--card-border-radius, 16px);
+}
+
+.about-contact > :first-child {
+    margin-top: 0;
+}
+
+.about-contact > :last-child {
+    margin-bottom: 0;
+}
+
+.about-contact h2,
+.about-contact h3 {
+    margin-bottom: 0.75rem;
+}
