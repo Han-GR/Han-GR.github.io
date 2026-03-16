@@ -33,7 +33,10 @@ tags:
 - 随便购买一个域名就可,大概30一年
 
 #### 3. 获取域名的ssl证书
-- 在购买域名的网站直接申请,管理域名->购买的域名->设置->免费ssl->永久下载链接(可在脚本中使用,自动申请最新的证书)
+- 管理域名->购买的域名->设置->免费ssl
+- 下载 Private Key, 并保存到服务器上或者oss上(我是放在oss上，方便脚本中直接下载)
+- 保存永久下载链接(可在脚本中使用,自动申请最新的证书)
+- ![](assets/file-20260316190219726.png)
 
 #### 4.将购买的服务器IP解析到域名
 - 在购买域名的网站操作,管理域名->购买的域名->设置->DNS设置->子域名记录
@@ -71,8 +74,11 @@ systemctl status v2ray
 
 mkdir /etc/v2ray
 
-wget "https://www.dynadot.com/letsencrypt/download_cert?key=n6b8F6X7Zg6T9W6l8R8jYl7w8z6qM83Kr6o7c6tL&domain=wnbzgdzpf.top" -O /etc/v2ray/v2ray.cert
-wget "https://picazza-test.oss-cn-beijing.aliyuncs.com/self_built_v2ray/ssl/wnbzgdzpf.top.key" -O /etc/v2ray/v2ray.key
+# dynadot提供的永久链接
+wget "https://www.dynadot.com/letsencrypt/download_cert?key=<LETSENCRYPT_DOWNLOAD_KEY>&domain=example.com" -O /etc/v2ray/v2ray.cert
+
+# 自己存放四要的地址
+wget "https:/example-link/example.com.key" -O /etc/v2ray/v2ray.key
 
 
 cat > /usr/local/etc/v2ray/config.json <<EOF
@@ -91,7 +97,7 @@ cat > /usr/local/etc/v2ray/config.json <<EOF
             "settings": {
                 "clients": [
                     {
-                        "password": "a4100ea3-d5bc-4dd6-b02a-a55321fb0bcc",
+                        "password": "<YOUR_UUID>",
                         "flow": "xtls-rprx-vision",
                         "email": "trojan-user@example.com"
                     }
@@ -102,7 +108,7 @@ cat > /usr/local/etc/v2ray/config.json <<EOF
                 "network": "tcp",
                 "security": "tls",
                 "tlsSettings": {
-                    "serverName": "newjersey.wnbzgdzpf.top",
+                    "serverName": "node1.example.com",
                     "alpn": [
                         "http/1.1"
                     ],
@@ -123,7 +129,7 @@ cat > /usr/local/etc/v2ray/config.json <<EOF
             "settings": {
                 "clients": [
                     {
-                        "id": "a4100ea3-d5bc-4dd6-b02a-a55321fb0bcc",
+                        "id": "<YOUR_UUID>",
                         "flow": "xtls-rprx-vision",
                         "email": "vless-user@example.com",
                         "level": 0
@@ -135,7 +141,7 @@ cat > /usr/local/etc/v2ray/config.json <<EOF
                 "network": "tcp",
                 "security": "tls",
                 "tlsSettings": {
-                    "serverName": "newjersey.wnbzgdzpf.top",
+                    "serverName": "node1.example.com",
                     "alpn": [
                         "http/1.1"
                     ],
@@ -275,13 +281,13 @@ proxies:
 
 type: vless
 
-server: newjersey.wnbzgdzpf.top # 域名
+server: node1.example.com # 域名
 
 port: 1998 # VLESS端口
 
-uuid: a4100ea3-d5bc-4dd6-b02a-a55321fb0bcc # 与服务端VLESS的id一致
+uuid: <YOUR_UUID> # 与服务端VLESS的id一致
 
-servername: wnbzgdzpf.top # 证书域名（同sni）
+servername: example.com # 证书域名（同sni）
 
 flow: "xtls-rprx-vision" # 与服务端flow一致（增强模式）
 
@@ -298,13 +304,13 @@ skip-cert-verify: false
 
 type: trojan # 协议类型：trojan（必须与服务端一致）
 
-server: newjersey.wnbzgdzpf.top # 服务器域名（已解析到您的Vultr IP）
+server: node1.example.com # 服务器域名（已解析到您的Vultr IP）
 
 port: 1996 # 服务器端口（与服务端port一致）
 
-password: a4100ea3-d5bc-4dd6-b02a-a55321fb0bcc # 与服务端password一致
+password: <YOUR_UUID> # 与服务端password一致
 
-sni: wnbzgdzpf.top # 与服务端serverName一致（证书域名）
+sni: example.com # 与服务端serverName一致（证书域名）
 
 skip-cert-verify: false # 关闭证书跳过（必须验证证书）
 
