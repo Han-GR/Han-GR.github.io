@@ -36,11 +36,11 @@ comments: false
 - [SMS-Hero](https://sms-hero.com/)：免费短信验证码服务
 - [USAddressGen](https://usaddressgen.com/)：美国地址生成工具
 - [API](https://api.mmp.cc/)：免费API
+- [Yandex](https://yandex.com/)：搜索引擎
 
 ### 娱乐
 - [qwerty.kaiyi.cool](https://qwerty.kaiyi.cool/): 为键盘工作者设计的单词记忆与英语肌肉记忆锻炼软件
 - [Z-Library](https://zlib.li/): Z-Library 是世界上最大的在线图书馆，提供免费的电子书下载
-- [LibGen](https://libgen.rs/): LibGen 是一个免费的在线图书馆，提供免费的电子书下载
 - [Send to Kindle](https://www.amazon.com/sendtokindle): 一个免费的工具，用于将电子书发送到 Kindle 设备
 - [Music.gdstudio.xyz](https://music.gdstudio.xyz/): 一个免费的在线音乐库，提供免费的音乐下载
 - [JidiYouXi](https://www.jidiyouxi.com/): 一个免费的在线游戏库，提供免费的游戏下载
