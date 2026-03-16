@@ -13,8 +13,16 @@
 
 [[social]]
     identifier = "email"        # 邮箱链接，mailto: 协议
-    name       = "邮件"
+    name       = "Email"
     url        = "mailto:han_gr@foxmail.com"
 
     [social.params]
         icon = "mail"           # 对应 assets/icons/mail.svg
+
+[[social]]
+    identifier = "rss"          # RSS 订阅
+    name       = "RSS"
+    url        = "https://han-gr.github.io/index.xml"
+
+    [social.params]
+        icon = "rss"            # 对应 assets/icons/rss.svg
