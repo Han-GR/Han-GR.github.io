@@ -4,4 +4,4 @@ resources
 .DS_Store
 assets/jsconfig.json
 .obsidian/*
-02-Tech/*
+content/template/*
