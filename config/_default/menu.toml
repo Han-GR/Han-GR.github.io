@@ -6,7 +6,7 @@
 [[social]]
     identifier = "github"       # GitHub 链接
     name       = "GitHub"
-    url        = "https://github.com/CaiJimmy/hugo-theme-stack"
+    url        = "https://github.com/Han-GR"
 
     [social.params]
         icon = "brand-github"   # 使用品牌图标：assets/icons/brand-github.svg
