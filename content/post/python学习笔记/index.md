@@ -3,7 +3,7 @@ title: python学习笔记
 description: ""
 slug: 2021-03-17-python学习笔记
 date: 2021-03-17
-image: static/cover/python.webp
+image: /cover/python.webp
 categories:
   - 编程语言
 tags:
