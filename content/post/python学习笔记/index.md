@@ -8,6 +8,7 @@ categories:
   - 编程语言
 tags:
   - python
+  - 基础
 ---
 ### 一、Python基本概念
 
