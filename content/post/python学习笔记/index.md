@@ -196,20 +196,20 @@ print('北京'+2022)
 # 正确应该是print('北京'+'2022')
 ```
 
-#### 3、chr和or，字符和ascall的相互转换
+#### 3、chr和ord字符和ASCII的相互转换
 
-**Ascall表**
+**ASCII表**
 ![](assets/file-20260317135116731.png)
 
 ```python
-#使用chr 输出转换ascll码
+#使用chr 输出转换ASCII码
 
 #输出字符串b
 print('b')
-#数字98在ascll码表中对应的就是b，使用chr将98转换成ascall中对应的结果
+#数字98在ASCII码表中对应的就是b，使用chr将98转换成ASCII中对应的结果
 print(chr(98)) # b
 
-#使用ord将字符转换哼ascool码 跟chr是相反的
+#使用ord将字符转换成ASCII码 跟chr是相反的
 #注意ord中只能放一个字符
 print(ord('b')) # 98
 ```
