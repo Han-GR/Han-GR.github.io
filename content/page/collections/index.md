@@ -37,6 +37,7 @@ comments: false
 - [USAddressGen](https://usaddressgen.com/)：美国地址生成工具
 - [API](https://api.mmp.cc/)：免费API
 - [Yandex](https://yandex.com/)：搜索引擎
+- [Icons](https://tabler.io/): icons
 
 ### 娱乐
 - [qwerty.kaiyi.cool](https://qwerty.kaiyi.cool/): 为键盘工作者设计的单词记忆与英语肌肉记忆锻炼软件
