@@ -3,7 +3,7 @@ title: 实用的Python自动化脚本
 description: ""
 slug: 2022-05-12-实用的Python自动化脚本
 date: 2022-05-12
-image: ""
+image: python.webp
 categories:
   - 运维&云原生
 tags:
