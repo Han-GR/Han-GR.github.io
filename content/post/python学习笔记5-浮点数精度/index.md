@@ -3,9 +3,12 @@ title: python学习笔记5-浮点数精度
 description: ""
 slug: 2021-04-25-python学习笔记5-浮点数精度
 date: 2021-04-25
-image: ""
+image: python.webp
 categories:
+  - 编程语言
 tags:
+  - python
+  - 浮点数
 ---
 ### Python中浮点数的精度问题
 
