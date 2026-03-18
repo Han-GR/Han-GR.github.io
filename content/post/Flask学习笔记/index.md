@@ -3,7 +3,7 @@ title: Flask学习笔记-基础入门
 description: ""
 slug: 2021-10-25-Flask学习笔记-基础入门
 date: 2021-10-25
-image: flask
+image: flask.webp
 categories:
   - 后端
 tags:
