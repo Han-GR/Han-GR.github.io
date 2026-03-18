@@ -1,7 +1,7 @@
 ---
-title: python学习笔记3
+title: python学习笔记3-运算符
 description: ""
-slug: 2021-04-17-python学习笔记3
+slug: 2021-04-17-python学习笔记3-运算符
 date: 2021-04-17
 image: python.webp
 categories:

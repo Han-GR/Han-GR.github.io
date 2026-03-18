@@ -28,7 +28,7 @@ comments: false
 - [Regex101](https://regex101.com/)：正则在线调试、解释与测试用例
 - [Excalidraw](https://excalidraw.com/)：手绘风架构图/流程图，适合写技术笔记
 - [diagrams.net](https://app.diagrams.net/)：流程图、架构图、UML 在线绘制
-- [Mermaid](https://www.momeitubiao.com/): 在线图标编辑器
+- [Mermaid](https://www.momeitubiao.com/): 在线图表编辑器
 - [shields.io](https://shields.io/)：生成 README 徽章（build、license、version 等）
 - [SpiderTools](https://spidertools.cn/)：在线工具集合，包含但不限于 JSON 格式化、Base64 编码/解码、时间戳转换等
 - [Privacy](https://library.aiuys.com/)：隐私工具

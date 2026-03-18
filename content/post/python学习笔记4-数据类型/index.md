@@ -1,7 +1,7 @@
 ---
-title: python学习笔记4
+title: python学习笔记4-数据类型
 description: ""
-slug: 2021-04-25-python学习笔记4
+slug: 2021-04-25-python学习笔记4-数据类型
 date: 2021-04-25
 image: python.webp
 categories:

@@ -1,13 +1,14 @@
 ---
-title: python学习笔记5
+title: python学习笔记6-流程控制
 description: ""
-slug: 2021-05-02-python学习笔记5
+slug: 2021-05-02-python学习笔记6-流程控制
 date: 2021-05-02
 image: python.webp
 categories:
   - 编程语言
 tags:
   - python
+  - 流程控制
 ---
 
 ### 流程控制-选择结构

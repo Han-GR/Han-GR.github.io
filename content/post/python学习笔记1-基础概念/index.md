@@ -1,7 +1,7 @@
 ---
-title: python学习笔记
+title: python学习笔记1-基础概念
 description: ""
-slug: 2021-03-17-python学习笔记
+slug: 2021-03-17-python学习笔记1-基础概念
 date: 2021-03-17
 image: python.webp
 categories:

@@ -1,7 +1,7 @@
 ---
-title: python学习笔记2
+title: python学习笔记2-变量
 description: ""
-slug: 2021-04-11-python学习笔记2
+slug: 2021-04-11-python学习笔记2-变量
 date: 2021-04-11
 image: python.webp
 categories:
