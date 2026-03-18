@@ -77,8 +77,8 @@ mkdir /etc/v2ray
 # dynadot提供的永久链接
 wget "https://www.dynadot.com/letsencrypt/download_cert?key=<LETSENCRYPT_DOWNLOAD_KEY>&domain=example.com" -O /etc/v2ray/v2ray.cert
 
-# 自己存放四要的地址
-wget "https:/example-link/example.com.key" -O /etc/v2ray/v2ray.key
+# 自己存放私钥的地址
+wget "https://example.com/ssl/example.com.key" -O /etc/v2ray/v2ray.key
 
 
 cat > /usr/local/etc/v2ray/config.json <<EOF
