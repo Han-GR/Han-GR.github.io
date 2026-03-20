@@ -1,8 +1,8 @@
 ---
 title: Git学习笔记
 description: ""
-slug: 2021-09-02-Git学习笔记
-date: 2021-09-08
+slug: 2021-09-30-Git学习笔记
+date: 2021-09-30
 image: git.png
 categories:
   - 运维&云原生
