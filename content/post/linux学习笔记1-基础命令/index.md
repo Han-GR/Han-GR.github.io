@@ -1,7 +1,7 @@
 ---
-title: linux学习笔记
+title: linux学习笔记1-基础命令
 description: ""
-slug: 2021-09-06-linux学习笔记
+slug: 2021-09-06-linux学习笔记1-基础命令
 date: 2021-09-06
 image: linux.jpg
 categories:
