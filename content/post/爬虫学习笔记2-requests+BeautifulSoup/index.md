@@ -86,7 +86,7 @@ requests.request(method, url, **kwargs)
 
 控制访问的参数，均为可选项
 
-##### 1. params：字典或字节序列，作为参数增加到url中
+##### params：字典或字节序列，作为参数增加到url中
 
 例如构造一个字典，通过 .request() 方法向网页提交：
 
@@ -99,7 +99,7 @@ print(r.url)
 ![](assets/file-20260321143614949.png)
 
 
-##### 2. data：字典、字节序列或文件对象，作为Request的对象
+##### data：字典、字节序列或文件对象，作为Request的对象
 
 例如构造一个字典和字符串，通过 .request() 方法向网页提交：
 
@@ -112,34 +112,34 @@ body = '测试'
 r = requests.request('POST', 'https://www.baidu.com', data=body)  
 ```
 
-##### 3. json：JSON格式的数据，作为Request的内容
+##### json：JSON格式的数据，作为Request的内容
 
 ```python
 kv = {'key1': 'value1'}
 r = requests.request('POST', 'https://www.baidu.com', json=kv)
 ```
 
-##### 4. headers：字典，HTTP定制头
+##### headers：字典，HTTP定制头
 
 ```python
 hd = {'user-agent': 'Chrome/10'}
 r = requests.request('POST', 'https://www.baidu.com', headers=hd)
 ```
 
-##### 5. files：字典类型，传输文件
+##### files：字典类型，传输文件
 
 ```python
 fs = {'file': open('data.xls','rb')}
 r = requests.request('POST', 'https://www.baidu.com', files=fs)
 ```
 
-##### 6. timeout：设定超时时间，秒为单位
+##### timeout：设定超时时间，秒为单位
 
 ```python
 r = requests.request('GET', 'https://www.baidu.com', timeout=10)
 ```
 
-##### 7. proxies：字典类型，设置访问代理服务器，可以增加登录认证
+##### proxies：字典类型，设置访问代理服务器，可以增加登录认证
 
 ```python
 proxies = {'http': 'http://user:pass@10.10.10.10:1234',
