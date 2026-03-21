@@ -1,8 +1,8 @@
 ---
 title: Flask学习笔记-基础入门
 description: ""
-slug: 2021-10-25-Flask学习笔记-基础入门
-date: 2021-10-25
+slug: 2022-02-25-Flask学习笔记-基础入门
+date: 2022-02-25
 image: flask.webp
 categories:
   - 后端
@@ -13,6 +13,8 @@ tags:
 ### Flask基本信息
 
 Flask 是一个轻量级 WSGI 网络应用框架，旨在让用户 快速、轻松上手，并能扩展到复杂的应用程序。
+文档地址：[Flask文档](https://dormousehole.readthedocs.io/en/latest/)
+
 
 ##### 安装Flask
 

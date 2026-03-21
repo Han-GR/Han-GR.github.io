@@ -39,7 +39,7 @@ comments: false
 - [API](https://api.mmp.cc/)：免费API
 - [Yandex](https://yandex.com/)：搜索引擎
 - [Icons](https://tabler.io/): icons
-
+- [Linux命令大全](https://www.linuxcool.com/): Linux命令在线查询手册  
 ### 娱乐
 - [qwerty.kaiyi.cool](https://qwerty.kaiyi.cool/): 为键盘工作者设计的单词记忆与英语肌肉记忆锻炼软件
 - [Z-Library](https://zlib.li/): Z-Library 是世界上最大的在线图书馆，提供免费的电子书下载
