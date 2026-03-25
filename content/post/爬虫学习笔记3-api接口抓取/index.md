@@ -45,7 +45,7 @@ API（Application Programming Interface，应用程序编程接口）是一组�
 ![](assets/file-20260324110900074.png)
 
 ```json
-	{
+{
     "errno": 0,
     "msg": "",
     "data": {
@@ -167,9 +167,8 @@ API（Application Programming Interface，应用程序编程接口）是一组�
         ]
     },
     "processTime": 0.012
-	}
-	```
-
+}
+```
 
 ### 分析请求地址
 
@@ -189,30 +188,30 @@ count=10.   每次请求数量是10个
 
 ```json
 {
-"errno": 0,
-"msg": "",
-"data": {
-	"total_count": 1996,
-	"total_page": 200,
-	"pageno": 0,
-	"count": 10,
-	"list": [
-		{
-			"id": "303197",
-			"author": "Mr. Lonely",
-			"user_image": "https://thirdwx.qlogo.cn/mmopen/vi_32/Pjribwpv4Uk0D6DIBxDsKiaj6oyaP8abYyIdyIX8cgWNZk9fgxss8dicJNRhic1ZE2ecODbicGgaZyAnjW0oxopvCpDD3Qmpu92KiaYaTicjdqMmus/132",
-			"category": "4K专区",
-			"tag": "城市夜景,灯光,古楼建筑,重庆洪崖洞",
-			"url": "http://cdn-hsyq-static-bak.shanhutech.cn/bizhi/staticwp/201704/7dfab70819f358b0190ac5934f94acae.jpg",
-			"status": "1",
-			"live_open": false,
-			"class_id": "36"
-		}
-	]
-},
-"processTime": 0.012
+    "errno": 0,
+    "msg": "",
+    "data": {
+        "total_count": 1996,
+        "total_page": 200,
+        "pageno": 0,
+        "count": 10,
+        "list": [
+            {
+                "id": "303197",
+                "author": "Mr. Lonely",
+                "user_image": "https://thirdwx.qlogo.cn/mmopen/vi_32/Pjribwpv4Uk0D6DIBxDsKiaj6oyaP8abYyIdyIX8cgWNZk9fgxss8dicJNRhic1ZE2ecODbicGgaZyAnjW0oxopvCpDD3Qmpu92KiaYaTicjdqMmus/132",
+                "category": "4K专区",
+                "tag": "城市夜景,灯光,古楼建筑,重庆洪崖洞",
+                "url": "http://cdn-hsyq-static-bak.shanhutech.cn/bizhi/staticwp/201704/7dfab70819f358b0190ac5934f94acae.jpg",
+                "status": "1",
+                "live_open": false,
+                "class_id": "36"
+            }
+        ]
+    },
+    "processTime": 0.012
 }
-	```
+```
 
 根据返回参数猜测
 
