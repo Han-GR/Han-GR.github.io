@@ -35,26 +35,25 @@ pip3 install webdriver-manager
 ### 测试:访问百度
 
 ```python
-
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager 
-
-import time
-
-# 设置Chrome驱动
-service = Service(ChromeDriverManager().install()) 
-
-# 创建浏览器对象
-driver = webdriver.Chrome(service=service) 
-
-# 设置访问地址
-driver.get("https://www.baidu.com") 
-
-# 等待5秒
-time.sleep(5) 
-
-# 关闭浏览器
+from selenium import webdriver  
+from selenium.webdriver.chrome.service import Service  
+from webdriver_manager.chrome import ChromeDriverManager  
+  
+import time  
+  
+# 设置Chrome驱动  
+service = Service(ChromeDriverManager().install())  
+  
+# 创建浏览器对象  
+driver = webdriver.Chrome(service=service)  
+  
+# 设置访问地址  
+driver.get("https://www.baidu.com")  
+  
+# 等待5秒  
+time.sleep(5)  
+  
+# 关闭浏览器  
 driver.quit()
 ```
 
@@ -81,48 +80,48 @@ driver.quit()
 #### 详细操作示例
 
 ```python
-# 基础操作示例代码
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-import time 
-
-# 初始化浏览器
-service = Service(ChromeDriverManager().install())
-driver = webdriver.Chrome(service=service) 
-try:    
-	# 访问第一个网站    
-	driver.get("https://www.baidu.com")    
-	print(f"当前页面标题：{driver.title}")    
-	print(f"当前页面URL：{driver.current_url}")        
-	# 等待2秒    
-	time.sleep(2)        
-
-	# 访问第二个网站    
-	driver.get("https://www.taobao.com")    
-	print(f"新页面标题：{driver.title}")        
-	# 等待2秒    
-	time.sleep(2)        
-
-	# 后退到百度    
-	driver.back()    
-	print(f"后退后页面：{driver.title}")        
-	# 等待2秒    
-	time.sleep(2)        
-	# 前进到淘宝    
-	driver.forward()    
-	print(f"前进后页面：{driver.title}")        
-	# 刷新页面    
-	driver.refresh()        
-	# 最大化窗口    
-	driver.maximize_window()        
-	# 设置窗口大小    
-	driver.set_window_size(800, 600)    
-finally:    
-	# 关闭浏览器    
-	time.sleep(3)    
-	driver.quit()    
-	print("浏览器已关闭")
+import time  
+  
+from selenium import webdriver  
+from selenium.webdriver.chrome.service import Service  
+from webdriver_manager.chrome import ChromeDriverManager  
+  
+# 初始化浏览器  
+service = Service(ChromeDriverManager().install())  
+driver = webdriver.Chrome(service=service)  
+try:  
+    # 访问第一个网站  
+    driver.get("https://www.baidu.com")  
+    print(f"当前页面标题：{driver.title}")  
+    print(f"当前页面URL：{driver.current_url}")  
+    # 等待2秒  
+    time.sleep(2)  
+  
+    # 访问第二个网站  
+    driver.get("https://www.taobao.com")  
+    print(f"新页面标题：{driver.title}")  
+    # 等待2秒  
+    time.sleep(2)  
+  
+    # 后退到百度  
+    driver.back()  
+    print(f"后退后页面：{driver.title}")  
+    # 等待2秒  
+    time.sleep(2)  
+    # 前进到淘宝  
+    driver.forward()  
+    print(f"前进后页面：{driver.title}")  
+    # 刷新页面      
+	driver.refresh()  
+    # 最大化窗口  
+    driver.maximize_window()  
+    # 设置窗口大小  
+    driver.set_window_size(800, 600)  
+finally:  
+    # 关闭浏览器  
+    time.sleep(3)  
+    driver.quit()  
+    print("浏览器已关闭")
 ```
 
 ![](assets/file-20260326143505736.png)
@@ -278,9 +277,8 @@ import time
 from selenium import webdriver  
 from selenium.webdriver.chrome.service import Service  
 from selenium.webdriver.common.by import By  
-from webdriver_manager.chrome import ChromeDriverManager  
-  
 from selenium.webdriver.common.keys import Keys  
+from webdriver_manager.chrome import ChromeDriverManager  
   
 service = Service(ChromeDriverManager().install())  
 driver = webdriver.Chrome(service=service)  
@@ -311,90 +309,92 @@ finally:
 #### 点击操作
 
 ```python
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.common.by import By
-import time
- 
-service = Service(ChromeDriverManager().install())
-driver = webdriver.Chrome(service=service) 
-
-try:    
-	driver.get("https://www.baidu.com")        
-	
-	# 找到搜索框并输入内容    
-	search_box = driver.find_element(By.ID, "kw")    
-	search_box.send_keys("Python")        
-	
-	#方法1：直接点击百度一下按钮    
-	search_button = driver.find_element(By.ID, "su")    
-	search_button.click()    
-	time.sleep(2)        
-	
-	# 方法2：模拟键盘回车（不需要点击按钮）    
-	driver.back()  # 返回百度首页    
-	time.sleep(1)        
-	
-	search_box = driver.find_element(By.ID, "kw")    
-	search_box.clear()    
-	search_box.send_keys("Selenium")    
-	search_box.submit()  # 提交表单（相当于在输入框按回车）    
-	time.sleep(2)    
-finally:    
-	driver.quit()
+import time  
+  
+from selenium import webdriver  
+from selenium.webdriver.chrome.service import Service  
+from selenium.webdriver.common.by import By  
+from webdriver_manager.chrome import ChromeDriverManager  
+  
+service = Service(ChromeDriverManager().install())  
+driver = webdriver.Chrome(service=service)  
+  
+try:  
+    driver.get("https://www.baidu.com")  
+  
+    # 找到搜索框并输入内容  
+    search_box = driver.find_element(By.ID, "kw")  
+    search_box.send_keys("Python")  
+  
+    # 方法1：直接点击百度一下按钮  
+    search_button = driver.find_element(By.ID, "su")  
+    search_button.click()  
+    time.sleep(2)  
+  
+    # 方法2：模拟键盘回车（不需要点击按钮）  
+    driver.back()  # 返回百度首页  
+    time.sleep(1)  
+  
+    search_box = driver.find_element(By.ID, "kw")  
+    search_box.clear()  
+    search_box.send_keys("Selenium")  
+    search_box.submit()  # 提交表单（相当于在输入框按回车）  
+    time.sleep(2)  
+finally:  
+    driver.quit()
 ```
 
 #### 获取元素信息
 
 ```python
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.common.by import By 
-
-service = Service(ChromeDriverManager().install())
-driver = webdriver.Chrome(service=service) 
-
-try:    
-	driver.get("https://www.baidu.com")        
-	
-	# 获取搜索框元素    
-	search_box = driver.find_element(By.ID, "kw")        
-	
-	# 获取元素的各种属性    
-	print(f"元素标签名: {search_box.tag_name}")    
-	print(f"元素ID: {search_box.get_attribute('id')}")    
-	print(f"元素name: {search_box.get_attribute('name')}")    
-	print(f"元素class: {search_box.get_attribute('class')}")    
-	print(f"元素类型: {search_box.get_attribute('type')}")    
-	print(f"元素值: {search_box.get_attribute('value')}")    
-	print(f"元素是否可见: {search_box.is_displayed()}")    
-	print(f"元素是否可用: {search_box.is_enabled()}")    
-	print(f"元素是否被选中: {search_box.is_selected()}")        
-	
-	# 获取元素位置和大小    
-	location = search_box.location    
-	size = search_box.size    
-	print(f"元素位置: x={location['x']}, y={location['y']}")    
-	print(f"元素大小: 宽={size['width']}, 高={size['height']}")        
-	
-	# 获取元素文本（对于有文本的元素）    
-	baidu_link = driver.find_element(By.LINK_TEXT, "百度首页")    
-	print(f"链接文本: {baidu_link.text}")    
-finally:    
-driver.quit()
+from selenium import webdriver  
+from selenium.webdriver.chrome.service import Service  
+from selenium.webdriver.common.by import By  
+from webdriver_manager.chrome import ChromeDriverManager  
+  
+service = Service(ChromeDriverManager().install())  
+driver = webdriver.Chrome(service=service)  
+  
+try:  
+    driver.get("https://www.baidu.com")  
+  
+    # 获取搜索框元素  
+    search_box = driver.find_element(By.ID, "kw")  
+  
+    # 获取元素的各种属性  
+    print(f"元素标签名: {search_box.tag_name}")  
+    print(f"元素ID: {search_box.get_attribute('id')}")  
+    print(f"元素name: {search_box.get_attribute('name')}")  
+    print(f"元素class: {search_box.get_attribute('class')}")  
+    print(f"元素类型: {search_box.get_attribute('type')}")  
+    print(f"元素值: {search_box.get_attribute('value')}")  
+    print(f"元素是否可见: {search_box.is_displayed()}")  
+    print(f"元素是否可用: {search_box.is_enabled()}")  
+    print(f"元素是否被选中: {search_box.is_selected()}")  
+  
+    # 获取元素位置和大小  
+    location = search_box.location  
+    size = search_box.size  
+    print(f"元素位置: x={location['x']}, y={location['y']}")  
+    print(f"元素大小: 宽={size['width']}, 高={size['height']}")  
+  
+    # 获取元素文本（对于有文本的元素）  
+    baidu_link = driver.find_element(By.LINK_TEXT, "百度首页")  
+    print(f"链接文本: {baidu_link.text}")  
+finally:  
+    driver.quit()
 ```
 
 #### 处理下拉框
 
 ```python
+import time  
+  
 from selenium import webdriver  
 from selenium.webdriver.chrome.service import Service  
-from webdriver_manager.chrome import ChromeDriverManager  
 from selenium.webdriver.common.by import By  
 from selenium.webdriver.support.select import Select  
-import time  
+from webdriver_manager.chrome import ChromeDriverManager  
   
 service = Service(ChromeDriverManager().install())  
 driver = webdriver.Chrome(service=service)  
@@ -431,7 +431,7 @@ try:
     for option in all_options:  
         print(f"  {option.text} (value: {option.get_attribute('value')})")  
   
-    # 获取已选中的选项  
+        # 获取已选中的选项  
     selected_option = select.first_selected_option  
     print(f"当前选中: {selected_option.text}")  
 finally:  
@@ -443,34 +443,34 @@ finally:
 #### 处理复选框和单选框
 
 ```python
+import time  
+  
 from selenium import webdriver  
 from selenium.webdriver.chrome.service import Service  
-from webdriver_manager.chrome import ChromeDriverManager  
 from selenium.webdriver.common.by import By  
-import time  
+from webdriver_manager.chrome import ChromeDriverManager  
   
 service = Service(ChromeDriverManager().install())  
 driver = webdriver.Chrome(service=service)  
   
 try:  
-    # 访问测试页面  
-    driver.get("https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_checkbox")  
-  
-    # 切换到iframe  
-    driver.switch_to.frame("iframeResult")  
-  
-    # 找到复选框  
-    vehicle1 = driver.find_element(By.ID, "vehicle1")  # 自行车  
-    vehicle2 = driver.find_element(By.ID, "vehicle2")  # 汽车  
-    vehicle3 = driver.find_element(By.ID, "vehicle3")  # 船  
-  
-    # 检查复选框状态  
-    print(f"自行车是否选中: {vehicle1.is_selected()}")  
-    print(f"汽车是否选中: {vehicle2.is_selected()}")  
-    print(f"船是否选中: {vehicle3.is_selected()}")  
-  
-    # 选中复选框（如果未选中）  
-    if not vehicle1.is_selected():  
+    # 访问测试页面    
+	driver.get("https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_checkbox")  
+	  
+	    # 切换到iframe    
+	driver.switch_to.frame("iframeResult")  
+	  
+	    # 找到复选框    
+	vehicle1 = driver.find_element(By.ID, "vehicle1")  # 自行车    
+	vehicle2 = driver.find_element(By.ID, "vehicle2")  # 汽车    
+	vehicle3 = driver.find_element(By.ID, "vehicle3")  # 船    
+	    # 检查复选框状态    
+	print(f"自行车是否选中: {vehicle1.is_selected()}")  
+	    print(f"汽车是否选中: {vehicle2.is_selected()}")  
+	    print(f"船是否选中: {vehicle3.is_selected()}")  
+	  
+	    # 选中复选框（如果未选中）    
+	if not vehicle1.is_selected():  
         vehicle1.click()  
         time.sleep(1)  
   
@@ -478,12 +478,12 @@ try:
         vehicle2.click()  
         time.sleep(1)  
   
-    # 取消选中（如果已选中）  
+        # 取消选中（如果已选中）  
     if vehicle3.is_selected():  
         vehicle3.click()  
         time.sleep(1)  
   
-    # 重新检查状态  
+        # 重新检查状态  
     print(f"自行车是否选中: {vehicle1.is_selected()}")  
     print(f"汽车是否选中: {vehicle2.is_selected()}")  
     print(f"船是否选中: {vehicle3.is_selected()}")  
@@ -697,18 +697,18 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By  
 from webdriver_manager.chrome import ChromeDriverManager  
   
-
 # 初始化浏览器  
 service = Service(ChromeDriverManager().install())  
 driver = webdriver.Chrome(service=service)  
-
-
+  
 """  
 爬取图片  
   
 参数:  
     page_num: 页数  
 """  
+  
+  
 def crawl_images(page_num):  
   
     # 具体页数的链接  
@@ -721,14 +721,15 @@ def crawl_images(page_num):
   
     # 遍历图片详情页链接，爬取图片  
     for link in links:  
+  
         try:  
-		    open_img_detail_link(link)  
-		  
-		    # 随机等待  
-		    random_wait()  
-		except Exception as e:  
-		    print(e)  
-		    continue  
+            open_img_detail_link(link)  
+  
+            # 随机等待  
+            random_wait()  
+        except Exception as e:  
+            print(e)  
+            continue  
   
   
   
@@ -739,7 +740,9 @@ def crawl_images(page_num):
     url: 网页链接  
     返回:  
     links: 当前网页所有图片的详情页链接列表  
-"""    
+"""  
+  
+  
 def get_img_detail_link(url):  
     # 打开网站链接  
     driver.get(url)  
@@ -759,6 +762,8 @@ def get_img_detail_link(url):
 参数:  
     link: 图片详情页链接  
 """  
+  
+  
 def open_img_detail_link(link):  
     # 访问图片的详细链接  
     driver.get(link)  
@@ -785,6 +790,8 @@ def open_img_detail_link(link):
 参数:  
     img_url: 图片链接  
 """  
+  
+  
 def download_image(img_url):  
     try:  
   
@@ -818,6 +825,8 @@ def download_image(img_url):
     base_max: 基础最大等待时间  
     variance: 随机波动范围（0-1）  
 """  
+  
+  
 def random_wait(base_min=1, base_max=3, variance=0.3):  
     # 基础等待时间  
     base_wait = random.uniform(base_min, base_max)  
@@ -835,8 +844,11 @@ def random_wait(base_min=1, base_max=3, variance=0.3):
   
   
 if __name__ == '__main__':  
-      
+  
     for i in range(1, 2711):  
+  
+        print(f"现在到了第{i}页")  
+  
         crawl_images(i)  
   
         random_wait()
