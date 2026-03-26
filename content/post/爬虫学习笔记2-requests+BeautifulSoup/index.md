@@ -3,7 +3,7 @@ title: 爬虫学习笔记2-requests+BeautifulSoup
 description: ""
 slug: 2022-03-05-爬虫学习笔记1-基础知识
 date: 2022-03-05
-image: crawlSpider.jpg
+image: requests&beautifulsoup.jpg
 categories:
   - AI&数据
 tags:

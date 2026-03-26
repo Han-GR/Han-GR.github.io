@@ -3,7 +3,7 @@ title: 爬虫学习笔记3-api接口抓取
 description: ""
 slug: 2022-04-10-爬虫学习笔记3-api接口抓取
 date: 2022-04-10
-image: crawlSpider.jpg
+image: api.webp
 categories:
   - AI&数据
 tags:

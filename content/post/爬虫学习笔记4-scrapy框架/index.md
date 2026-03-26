@@ -3,7 +3,7 @@ title: 爬虫学习笔记4-scrapy框架
 description: ""
 slug: 2022-05-25-爬虫学习笔记4-scrapy框架
 date: 2022-05-25
-image: crawlSpider.jpg
+image: scrapy.webp
 categories:
   - AI&数据
 tags:
