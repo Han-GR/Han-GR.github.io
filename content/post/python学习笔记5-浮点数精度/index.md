@@ -1,8 +1,8 @@
 ---
 title: python学习笔记5-浮点数精度
 description: ""
-slug: 2021-04-25-python学习笔记5-浮点数精度
-date: 2021-04-25
+slug: 2021-04-26-python学习笔记5-浮点数精度
+date: 2021-04-26
 image: python.webp
 categories:
   - 编程语言

@@ -47,3 +47,4 @@ comments: false
 - [Send to Kindle](https://www.amazon.com/sendtokindle): 一个免费的工具，用于将电子书发送到 Kindle 设备
 - [Music.gdstudio.xyz](https://music.gdstudio.xyz/): 一个免费的在线音乐库，提供免费的音乐下载
 - [JidiYouXi](https://www.jidiyouxi.com/): 一个免费的在线游戏库，提供免费的游戏下载
+- [yiqi](https://www.yiqiys.com/): 视频网站，提供免费的最新的视频
