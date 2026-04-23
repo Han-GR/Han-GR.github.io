@@ -19,7 +19,7 @@ tags:
 
 ![](assets/file-20260328140642120.png)
 
-分析截图可知，请求的 url 是 `https://wallspic.com/api/gallery?locale=cn` ， 请求类型是 P OST
+分析截图可知，请求的 url 是 `https://wallspic.com/api/gallery?locale=cn` ， 请求类型是 POST
 
 ### 分析请求参数
 
