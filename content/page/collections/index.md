@@ -39,8 +39,10 @@ comments: false
 - [API](https://api.mmp.cc/)：免费API
 - [Yandex](https://yandex.com/)：搜索引擎
 - [Icons](https://tabler.io/): icons
-- [Linux命令大全](https://www.linuxcool.com/): Linux命令在线查询手册  
+- [Linux命令大全](https://www.linuxcool.com/): Linux命令在线查询手册
+
 ### 娱乐
+
 - [qwerty.kaiyi.cool](https://qwerty.kaiyi.cool/): 为键盘工作者设计的单词记忆与英语肌肉记忆锻炼软件
 - [Z-Library](https://zlib.li/): Z-Library 是世界上最大的在线图书馆，提供免费的电子书下载
 - [Anna’s Archive](https://annas-archive.gd/): 安娜的档案，人类历史上最大的完全开放的图书馆
@@ -48,3 +50,6 @@ comments: false
 - [Music.gdstudio.xyz](https://music.gdstudio.xyz/): 一个免费的在线音乐库，提供免费的音乐下载
 - [JidiYouXi](https://www.jidiyouxi.com/): 一个免费的在线游戏库，提供免费的游戏下载
 - [yiqi](https://www.yiqiys.com/): 视频网站，提供免费的最新的视频
+
+### AI
+- []
