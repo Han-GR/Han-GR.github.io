@@ -52,4 +52,7 @@ comments: false
 - [yiqi](https://www.yiqiys.com/): 视频网站，提供免费的最新的视频
 
 ### AI
-- []
+
+- [firecrawl](https://www.firecrawl.dev/): [[mcp]] 让AI自动抓取和理解网页内容
+- [context7](https://context7.com/): [[mcp]] 帮AI获取到最新的技术文档
+- [skillsmp](https://skillsmp.com/): [[skill]]  AI skills查询网站
