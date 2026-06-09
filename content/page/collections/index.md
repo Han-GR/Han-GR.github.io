@@ -62,4 +62,5 @@ comments: false
 ### 交易
 
 - [stripe](https://dashboard.stripe.com/): 全球在线支付服务商
+- [paypal](https://www.paypal.com/): 在线支付服务商
 - 
