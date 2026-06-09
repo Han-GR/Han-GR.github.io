@@ -59,8 +59,10 @@ comments: false
 - [skillsmp](https://skillsmp.com/): [[skill]]  AI skills查询网站
 - [openrouter](https://openrouter.ai/): [API] # 大语言模型统一接口
 
-### 交易
+### 工作流
 
+- [vultr](https://www.vultr.com/): 云计算服务提供商
+- [dynadot](https://www.dynadot.com/): 域名注册商
 - [stripe](https://dashboard.stripe.com/): 全球在线支付服务商
 - [paypal](https://www.paypal.com/): 在线支付服务商
 - 
