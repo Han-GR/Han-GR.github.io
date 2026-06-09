@@ -21,6 +21,7 @@ comments: false
 - [DEV Community](https://dev.to/)：英文开发者社区与技术文章
 - [LeetCode](https://leetcode.com/)：算法与数据结构题库，面试常备
 - [Reddit](https://www.reddit.com/)：英文技术新闻与讨论
+- [cloudflare](https://cloudflare.com/): 赛博菩萨
  
 ### 工具
 
@@ -56,3 +57,9 @@ comments: false
 - [firecrawl](https://www.firecrawl.dev/): [[mcp]] 让AI自动抓取和理解网页内容
 - [context7](https://context7.com/): [[mcp]] 帮AI获取到最新的技术文档
 - [skillsmp](https://skillsmp.com/): [[skill]]  AI skills查询网站
+- [openrouter](https://openrouter.ai/): [API] # 大语言模型统一接口
+
+### 交易
+
+- [stripe](https://dashboard.stripe.com/): 全球在线支付服务商
+- 
