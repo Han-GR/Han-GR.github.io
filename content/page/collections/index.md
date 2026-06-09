@@ -21,7 +21,7 @@ comments: false
 - [DEV Community](https://dev.to/)：英文开发者社区与技术文章
 - [LeetCode](https://leetcode.com/)：算法与数据结构题库，面试常备
 - [Reddit](https://www.reddit.com/)：英文技术新闻与讨论
-- [cloudflare](https://cloudflare.com/): 赛博菩萨
+
  
 ### 工具
 
@@ -61,8 +61,10 @@ comments: false
 
 ### 工作流
 
+- [cloudflare](https://cloudflare.com/): 赛博菩萨
 - [vultr](https://www.vultr.com/): 云计算服务提供商
 - [dynadot](https://www.dynadot.com/): 域名注册商
+- [resend](https://resend.com/): 专为开发者设计的电子邮件 API
 - [stripe](https://dashboard.stripe.com/): 全球在线支付服务商
 - [paypal](https://www.paypal.com/): 在线支付服务商
 - 
