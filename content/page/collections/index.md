@@ -39,7 +39,8 @@ comments: false
 - [USAddressGen](https://usaddressgen.com/)：美国地址生成工具
 - [API](https://api.mmp.cc/)：免费API
 - [Yandex](https://yandex.com/)：搜索引擎
-- [Icons](https://tabler.io/): icons
+- [tabler](https://tabler.io/): icons
+- [lucide](https://lucide.dev/): icons
 - [Linux命令大全](https://www.linuxcool.com/): Linux命令在线查询手册
 
 ### 娱乐
@@ -68,3 +69,5 @@ comments: false
 - [paypal](https://www.paypal.com/): 在线支付服务商
 - [atlascloud](https://www.atlascloud.ai): 开发者专属全模态推理平台，提供统一 API 接入 300+AI 模型
 - [openrouter](https://openrouter.ai/): ‌AI 模型聚合平台，通过统一 API 接口接入全球数百种大模型
+- [x](https://x.com): 推广社交平台
+- [instagram](https://www.instagram.com): 推广社交平台
