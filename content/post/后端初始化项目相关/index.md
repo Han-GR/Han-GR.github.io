@@ -3,10 +3,13 @@ title: 后端初始化项目相关
 description: ""
 slug: 2022-08-15-后端初始化项目相关
 date: 2022-08-15
-image: ""
+image: java.jpg
 categories:
   - 后端
 tags:
+  - Java
+  - maven
+  - SpringBoot
 ---
 
 ### MySQL
@@ -56,7 +59,4 @@ tags:
 ### Junit
 
 - 单元测试库
-
-
-
 

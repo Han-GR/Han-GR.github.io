@@ -3,7 +3,7 @@ title: java后端Swagger+Knife4j
 description: ""
 slug: 2022-09-11-java后端Swagger-与-Knife4j
 date: 2022-09-11
-image: ""
+image: swagger.webp
 categories:
   - 后端
 tags:
