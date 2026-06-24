@@ -3,12 +3,13 @@ title: knife4j不能上传文件的解决方案
 description: ""
 slug: 2022-09-18-knife4j不能上传文件的解决方案
 date: 2022-09-18
-image: ""
+image: knife4j.png
 categories:
   - 后端
 tags:
   - knife4j
   - springBoot
+  - swagger
 ---
 
 ### 问题描述

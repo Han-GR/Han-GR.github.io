@@ -3,7 +3,7 @@ title: SpringBoot自定义启动Banner
 description: ""
 slug: 2022-10-01-SpringBoot自定义启动Banner
 date: 2022-10-01
-image: ""
+image: springboot.png
 categories:
   - 后端
 tags:
