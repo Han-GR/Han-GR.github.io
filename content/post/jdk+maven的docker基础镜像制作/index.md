@@ -1,8 +1,8 @@
 ---
 title: jdk + maven  docker基础镜像制作
 description: ""
-slug: 2022-09-01-jdk-+-maven--docker基础镜像制作
-date: 2022-09-01
+slug: 2023-02-01-jdk-+-maven--docker基础镜像制作
+date: 2023-02-01
 image: ""
 categories:
   - 后端

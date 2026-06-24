@@ -1,9 +1,9 @@
 ---
 title: Docker 安装问题
 description: ""
-slug: 2023-08-31-Docker-安装问题
-date: 2023-08-31
-image: ""
+slug: 2023-01-15-Docker-安装问题
+date: 2023-01-15
+image: docker.png
 categories:
   - 运维&云原生
 tags:
