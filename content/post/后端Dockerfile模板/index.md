@@ -1,9 +1,9 @@
 ---
 title: 后端 Dockerfile 模板
 description: ""
-slug: 2022-09-01-后端-Dockerfile-模板
-date: 2022-09-01
-image: ""
+slug: 2023-09-22-后端-Dockerfile-模板
+date: 2023-09-22
+image: dockerfile.jpg
 categories:
   - 后端
 tags:
