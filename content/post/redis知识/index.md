@@ -1,9 +1,9 @@
 ---
 title: redis知识
 description: ""
-slug: 2022-09-14-redis知识
-date: 2022-09-14
-image: ""
+slug: 2023-05-11-redis知识
+date: 2023-05-11
+image: redis.png
 categories:
   - 后端
 tags:
