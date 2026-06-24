@@ -1,14 +1,14 @@
 ---
-title: "匹配算法"
+title: 匹配算法
 description: ""
-slug: 2024-09-21-匹配算法
-date: 2024-09-21
-image: ""
+slug: 2024-02-21-匹配算法
+date: 2024-02-21
+image: levenshtein_distance.jpg
 categories:
-  - "算法&计算机基础"
+  - 算法&计算机基础
 tags:
-  - "算法"
-  - "编辑距离"
+  - 算法
+  - 编辑距离
 ---
 
 ### 背景
@@ -50,7 +50,7 @@ tags:
     * Description: 算法工具类
     * Author: HanGR
     * Project: uc-back
-    * Date: 2024/9/21 8:49
+    * Date: 2024/2/21 8:49
     * Realize:
     */
    public class AlgorithmUtils {

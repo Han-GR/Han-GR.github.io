@@ -72,7 +72,6 @@ public List<UserVO> matchUser(long num, User loginUser) {
 
 - 时间复杂度：O(n^2)
 - 实测：283 万用户，响应时间约 64s
-- ![](assets/file-20260310205819164.png)
 
 ## 优化思路
 
@@ -146,5 +145,4 @@ public List<UserVO> matchUser(long num, User loginUser) {
 ## 结果
 
 - 耗时降低到约 23s
-- ![](assets/file-20260310205939927.png)
 - 仍有优化空间：可以继续考虑缓存/离线计算等方案
