@@ -1,15 +1,15 @@
 ---
-title: "redis知识"
+title: redis知识
 description: ""
-slug: 2024-09-14-redis知识
-date: 2024-09-14
+slug: 2022-09-14-redis知识
+date: 2022-09-14
 image: ""
 categories:
-  - "后端"
+  - 后端
 tags:
-  - "redis"
-  - "Spring Data"
-  - "Spring Data Redis"
+  - redis
+  - Spring Data
+  - Spring Data Redis
 ---
 
 ### Redis

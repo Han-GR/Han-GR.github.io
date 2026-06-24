@@ -1,8 +1,8 @@
 ---
 title: 后端初始化项目相关
 description: ""
-slug: 2022-09-04-后端初始化项目相关
-date: 2022-09-04
+slug: 2022-08-15-后端初始化项目相关
+date: 2022-08-15
 image: ""
 categories:
   - 后端

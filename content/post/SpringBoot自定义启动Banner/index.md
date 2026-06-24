@@ -1,14 +1,14 @@
 ---
-title: "SpringBoot自定义启动Banner"
+title: SpringBoot自定义启动Banner
 description: ""
-slug: 2024-10-01-SpringBoot自定义启动Banner
-date: 2024-10-01
+slug: 2022-10-01-SpringBoot自定义启动Banner
+date: 2022-10-01
 image: ""
 categories:
-  - "后端"
+  - 后端
 tags:
-  - "SpringBoot"
-  - "Banner"
+  - SpringBoot
+  - Banner
 ---
 
 ### 背景

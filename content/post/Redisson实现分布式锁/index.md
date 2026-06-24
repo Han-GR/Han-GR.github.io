@@ -1,14 +1,14 @@
 ---
-title: "Redisson实现分布式锁"
+title: Redisson实现分布式锁
 description: ""
-slug: 2024-09-17-Redisson实现分布式锁
-date: 2024-09-17
+slug: 2022-09-17-Redisson实现分布式锁
+date: 2022-09-17
 image: ""
 categories:
-  - "后端"
+  - 后端
 tags:
-  - "Redisson"
-  - "分布式锁"
+  - Redisson
+  - 分布式锁
 ---
 
 ### Redisson实现分布式锁

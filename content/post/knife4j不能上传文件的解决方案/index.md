@@ -1,8 +1,8 @@
 ---
 title: knife4j不能上传文件的解决方案
 description: ""
-slug: 2022-12-17-knife4j不能上传文件的解决方案
-date: 2022-12-17
+slug: 2022-09-18-knife4j不能上传文件的解决方案
+date: 2022-09-18
 image: ""
 categories:
   - 后端
