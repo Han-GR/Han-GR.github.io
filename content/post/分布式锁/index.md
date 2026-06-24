@@ -1,15 +1,15 @@
 ---
-title: "分布式锁"
+title: 分布式锁
 description: ""
-slug: 2024-09-16-分布式锁
-date: 2024-09-16
-image: ""
+slug: 2023-05-30-分布式锁
+date: 2023-05-30
+image: distributed-lock.webp
 categories:
-  - "后端"
+  - 后端
 tags:
-  - "分布式"
-  - "分布式锁"
-  - "锁"
+  - 分布式
+  - 分布式锁
+  - 锁
 ---
 
 ### 背景
