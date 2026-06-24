@@ -1,14 +1,14 @@
 ---
-title: "跨域问题解决方案"
+title: 跨域问题解决方案
 description: ""
-slug: 2024-09-02-跨域问题解决方案
-date: 2024-09-02
-image: ""
+slug: 2022-11-23-跨域问题解决方案
+date: 2022-11-23
+image: cors.png
 categories:
-  - "前端"
+  - 前端
 tags:
-  - "跨域"
-  - "nginx"
+  - 跨域
+  - nginx
 ---
 
 ### 什么是跨域？
@@ -57,10 +57,9 @@ tags:
 3. 修改后端服务
 
     - (1) 在代码中添加@CrossOrigin注解, 用于处理跨域请求, 它允许来自"http://xxx.com"的请求访问资源, 并允许携带凭证(如cookies)
-    ![image](assets/file-20260310210921298.png)
-
+	![](assets/file-20260624170123759.png)
     - ((2) 添加web全局清求拦截器(常用)
-    ![image](assets/file-20260310210930942.png)
+    ![](assets/file-20260624170238707.png)
 
     - (3) 返回新的CorsFilter
 
