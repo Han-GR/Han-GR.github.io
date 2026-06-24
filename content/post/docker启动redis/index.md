@@ -1,9 +1,9 @@
 ---
 title: docker启动redis
 description: ""
-slug: 2023-09-12-docker启动redis
-date: 2023-09-12
-image: ""
+slug: 2023-05-08-docker启动redis
+date: 2023-05-08
+image: docker_redis.webp
 categories:
   - 运维&云原生
 tags:
