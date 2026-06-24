@@ -1,17 +1,17 @@
 ---
-title: "海外服务器部署v2ray"
+title: 海外服务器部署v2ray
 description: ""
-slug: 2026-01-28-海外服务器部署v2ray
-date: 2026-01-28
-image: ""
+slug: 2024-02-28-海外服务器部署v2ray
+date: 2024-02-28
+image: v2ray.jpg
 categories:
-  - "运维&云原生"
+  - 运维&云原生
 tags:
-  - "v2ary"
-  - "vutrl"
-  - "dynadot"
-  - "clash"
-  - "clash verge"
+  - v2ary
+  - vutrl
+  - dynadot
+  - clash
+  - clash verge
 ---
 
 ## 介绍
