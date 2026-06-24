@@ -1,21 +1,20 @@
 ---
-title: "jdk + maven  docker基础镜像制作"
+title: jdk + maven  docker基础镜像制作
 description: ""
-slug: 2024-09-01-jdk-+-maven--docker基础镜像制作
-date: 2024-09-01
+slug: 2022-09-01-jdk-+-maven--docker基础镜像制作
+date: 2022-09-01
 image: ""
 categories:
-  - "后端"
+  - 后端
 tags:
-  - "Java"
-  - "maven"
-  - "Docker"
+  - Java
+  - maven
+  - Docker
 ---
 
 ### 背景
 
-- 项目学习之初, 在本地用的是 jdk21, 所以如果想要用 docker 部署, 就需要 jdk21 的镜像, 很遗憾, 在网上没找到现成的(
-  也有可能是我不会找)
+- 项目学习之初, 在本地用的是 jdk21, 所以如果想要用 docker 部署, 就需要 jdk21 的镜像, 很遗憾, 在网上没找到现成的(也有可能是我不会找)
 
 
 ### 准备工作

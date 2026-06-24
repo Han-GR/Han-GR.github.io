@@ -1,14 +1,14 @@
 ---
-title: "Docker 安装问题"
+title: Docker 安装问题
 description: ""
-slug: 2024-08-31-Docker-安装问题
-date: 2024-08-31
+slug: 2023-08-31-Docker-安装问题
+date: 2023-08-31
 image: ""
 categories:
-  - "运维&云原生"
+  - 运维&云原生
 tags:
-  - "Docker"
-  - "Linux"
+  - Docker
+  - Linux
 ---
 
 ### 背景

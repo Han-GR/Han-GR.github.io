@@ -1,15 +1,15 @@
 ---
-title: "后端 Dockerfile 模板"
+title: 后端 Dockerfile 模板
 description: ""
-slug: 2024-09-01-后端-Dockerfile-模板
-date: 2024-09-01
+slug: 2022-09-01-后端-Dockerfile-模板
+date: 2022-09-01
 image: ""
 categories:
-  - "后端"
+  - 后端
 tags:
-  - "Java"
-  - "maven"
-  - "Docker"
+  - Java
+  - maven
+  - Docker
 ---
 
 ```dockerfile

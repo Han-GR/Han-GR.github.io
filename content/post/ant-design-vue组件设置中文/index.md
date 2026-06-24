@@ -1,15 +1,15 @@
 ---
-title: "ant-design-vue组件设置中文"
+title: ant-design-vue组件设置中文
 description: ""
-slug: 2024-12-30-ant-design-vue组件设置中文
-date: 2024-12-30
+slug: 2022-12-30-ant-design-vue组件设置中文
+date: 2022-12-30
 image: ""
 categories:
-  - "前端"
+  - 前端
 tags:
-  - "ant-design-vue"
-  - "组件"
-  - "中文"
+  - ant-design-vue
+  - 组件
+  - 中文
 ---
 
 ### 背景

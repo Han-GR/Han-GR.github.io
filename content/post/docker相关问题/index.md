@@ -1,13 +1,13 @@
 ---
-title: "docker相关问题"
+title: docker相关问题
 description: ""
-slug: 2025-01-15-docker相关问题
-date: 2025-01-15
+slug: 2023-01-15-docker相关问题
+date: 2023-01-15
 image: ""
 categories:
-  - "运维&云原生"
+  - 运维&云原生
 tags:
-  - "Docker"
+  - Docker
 ---
 
 ### 问题 1

@@ -1,15 +1,15 @@
 ---
-title: "java后端Swagger+Knife4j"
+title: java后端Swagger+Knife4j
 description: ""
-slug: 2024-09-11-java后端Swagger-与-Knife4j
-date: 2024-09-11
+slug: 2022-09-11-java后端Swagger-与-Knife4j
+date: 2022-09-11
 image: ""
 categories:
-  - "后端"
+  - 后端
 tags:
-  - "Java"
-  - "swagger"
-  - "knife4j"
+  - Java
+  - swagger
+  - knife4j
 ---
 这篇记录在 Java 后端项目里接入 Swagger / Knife4j，生成可在线调试的接口文档。
 

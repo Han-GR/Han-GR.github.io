@@ -1,14 +1,14 @@
 ---
-title: "knife4j不能上传文件的解决方案"
+title: knife4j不能上传文件的解决方案
 description: ""
-slug: 2024-12-17-knife4j不能上传文件的解决方案
-date: 2024-12-17
+slug: 2022-12-17-knife4j不能上传文件的解决方案
+date: 2022-12-17
 image: ""
 categories:
-  - "后端"
+  - 后端
 tags:
-  - "knife4j"
-  - "springBoot"
+  - knife4j
+  - springBoot
 ---
 
 ### 问题描述

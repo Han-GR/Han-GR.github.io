@@ -1,14 +1,14 @@
 ---
-title: "docker启动redis"
+title: docker启动redis
 description: ""
-slug: 2024-09-12-docker启动redis
-date: 2024-09-12
+slug: 2023-09-12-docker启动redis
+date: 2023-09-12
 image: ""
 categories:
-  - "运维&云原生"
+  - 运维&云原生
 tags:
-  - "Docker"
-  - "redis"
+  - Docker
+  - redis
 ---
 
 ### 背景
