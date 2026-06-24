@@ -1,15 +1,15 @@
 ---
-title: "docker安装elasticsearch和kibana"
+title: docker安装elasticsearch和kibana
 description: ""
 slug: 2024-10-08-docker安装-elasticsearch-与-kibana
 date: 2024-10-08
-image: ""
+image: docker_elastic_kibana.jpg
 categories:
-  - "运维&云原生"
+  - 运维&云原生
 tags:
-  - "Docker"
-  - "elasticsearch"
-  - "kibana"
+  - Docker
+  - elasticsearch
+  - kibana
 ---
 这篇记录用 Docker 在服务器上安装 Elasticsearch + Kibana（版本 7.17.23）的一套可复用步骤。
 
