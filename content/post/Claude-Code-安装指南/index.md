@@ -1,14 +1,14 @@
 ---
-title: "Claude Code 安装指南"
+title: Claude Code 安装指南
 description: ""
 slug: 2026-02-24-Claude-Code-安装指南
 date: 2026-02-24
-image: ""
+image: Claude-Code.jpg
 categories:
-  - "效率&工具"
-  - "AI&数据"
+  - 效率&工具
+  - AI&数据
 tags:
-  - "Claude Code"
+  - Claude-Code
 ---
 
 Claude Code 对于中国大陆用户，直接使用面临网络与账号双重门槛。但可以通过本地部署 + 国产大模型兼容层（GLM/DeepSeek）方案，实现无障碍安装使用。
