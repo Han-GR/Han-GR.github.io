@@ -1,14 +1,14 @@
 ---
-title: "在Obsidian中使用Claude Skill"
+title: 在Obsidian中使用Claude Skill
 description: ""
 slug: 2026-02-24-在Obsidian中使用Claude-Skill
 date: 2026-02-24
-image: ""
+image: obsidian-claudeCode.webp
 categories:
-  - "效率&工具"
+  - 效率&工具
 tags:
-  - "Claude"
-  - "Obsidian"
+  - Claude
+  - Obsidian
 ---
 
 ## 1. 核心组件

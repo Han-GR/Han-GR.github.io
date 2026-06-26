@@ -1,15 +1,15 @@
 ---
-title: "服务器部署两个网站"
+title: 服务器部署两个网站
 description: ""
 slug: 2026-01-20-服务器部署两个网站
 date: 2026-01-20
-image: ""
+image: ngnix.png
 categories:
-  - "运维&云原生"
+  - 运维&云原生
 tags:
-  - "nginx"
-  - "ruisapp"
-  - "picazza"
+  - nginx
+  - ruisapp
+  - picazza
 ---
 
 ## 问题介绍
