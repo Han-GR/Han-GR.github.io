@@ -10,9 +10,10 @@ tags:
   - CSS
   - Tailwind
   - Marquee
+  - RuiToolAI
 ---
 
-> 不用任何 JS 库，纯 CSS 实现无缝循环滚动。这是 RuiTool AI 客户评价组件的实现记录。
+> 不用任何 JS 库，纯 CSS 实现无缝循环滚动。这是 RuiToolAI 客户评价组件的实现记录。
 
 ## 效果目标
 
@@ -228,7 +229,7 @@ Tailwind 支持 `[animation-play-state:paused]` 这种任意值写法：
 
 const testimonials = [
   {
-    content: "RuiTool AI 的图片生成速度非常快，质量也很高。",
+    content: "RuiToolAI 的图片生成速度非常快，质量也很高。",
     name: "Sarah Chen",
     role: "UI 设计师",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100",

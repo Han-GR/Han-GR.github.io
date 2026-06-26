@@ -11,6 +11,7 @@ tags:
   - Google-OAuth
   - Passkey
   - Session
+  - RuiToolAI
 ---
 ## 为什么选 Lucia Auth
 
@@ -164,7 +165,7 @@ export const generatePasskeyRegistrationOptions = actionClient
   .action(async () => {
     const session = await requireVerifiedEmail();
     const options = await generateRegistrationOptions({
-      rpName: "RuiTool AI",
+      rpName: "RuiToolAI",
       rpID: process.env.NEXT_PUBLIC_APP_DOMAIN!,
       userID: session.user.id,
       userName: session.user.email,

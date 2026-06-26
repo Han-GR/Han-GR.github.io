@@ -9,10 +9,11 @@ categories:
   - 前端
 tags:
   - SaaS
+  - RuiToolAI
 ---
 ## 问题背景
 
-开发 RuiTool AI 的目标之一，是做一个**可复用的 SaaS 模板**。每次上线新站，只需要改品牌配置、首页文案、一个主功能模块，以及对应的第三方 API 配置。
+开发 RuiToolAI 的目标之一，是做一个**可复用的 SaaS 模板**。每次上线新站，只需要改品牌配置、首页文案、一个主功能模块，以及对应的第三方 API 配置。
 
 这意味着架构需要支持：
 
@@ -27,7 +28,7 @@ tags:
 ```
 共享代码（框架、认证、支付、数据库）
     └── 站点配置（品牌、功能、API）
-         └── 具体站点实例（RuiTool AI、Picazza、...）
+         └── 具体站点实例（RuiToolAI、xxxxx、...）
 ```
 
 ## 目录结构
@@ -162,7 +163,7 @@ export default async function ImageGenPage() {
 // src/site/config.ts
 export const siteConfig = {
   branding: {
-    siteName: process.env.NEXT_PUBLIC_SITE_NAME ?? "RuiTool AI",
+    siteName: process.env.NEXT_PUBLIC_SITE_NAME ?? "",
     siteDescription: process.env.NEXT_PUBLIC_SITE_DESCRIPTION ?? "",
     socialXUrl: process.env.NEXT_PUBLIC_SOCIAL_X_URL ?? "",
     socialInstagramUrl: process.env.NEXT_PUBLIC_SOCIAL_INSTAGRAM_URL ?? "",
@@ -202,19 +203,19 @@ export const siteMarketing = {
 
 ## 实际案例：从模板到新站点
 
-假设要创建一个叫 "Picazza" 的新站点，用不同的 AI 模型：
+假设要创建一个叫 "video-gen" 的新站点，用不同的 AI 模型：
 
-**步骤 1：** 复制 `sites/image-gen/` 为 `sites/picazza/`
+**步骤 1：** 复制 `sites/image-gen/` 为 `sites/video-gen/`
 
 **步骤 2：** 修改 `site.config.ts`：
 
 ```typescript
-export const picazzaSiteConfig = {
-  name: "Picazza",
+export const videoGenSiteConfig = {
+  name: "video-gen",
   tagline: "Professional design at your fingertips",
   billing: {
     creditsPerUse: 5,
-    usageDescription: "Picazza image generation",
+    usageDescription: "video generation",
   },
 };
 ```
@@ -225,7 +226,7 @@ export const picazzaSiteConfig = {
 const IMAGE_GEN_MODEL = "different-model-v2";
 ```
 
-**步骤 4：** 添加页面路由 `src/app/(sites)/picazza/page.tsx`
+**步骤 4：** 添加页面路由 `src/app/(sites)/video-gen/page.tsx`
 
 **步骤 5：** 修改环境变量，改品牌名和社交链接
 

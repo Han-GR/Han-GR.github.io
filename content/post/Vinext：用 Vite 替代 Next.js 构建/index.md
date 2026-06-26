@@ -10,10 +10,11 @@ categories:
 tags:
   - Vinext
   - cloudflare
+  - RuiToolAI
 ---
 ## 为什么要迁移到 Vinext
 
-RuiTool AI 最初是用标准 Next.js 开发的。但部署到 Cloudflare Workers 时遇到了一个根本问题：**Next.js 需要 Node.js 运行时，Workers 基于 V8 引擎，它们不兼容。**
+RuiToolAI 最初是用标准 Next.js 开发的。但部署到 Cloudflare Workers 时遇到了一个根本问题：**Next.js 需要 Node.js 运行时，Workers 基于 V8 引擎，它们不兼容。**
 
 当时只有一个选择：
 
@@ -184,7 +185,7 @@ Vinext 的 dev server 热更新偶尔不生效，需要手动刷新。
 
 ## 总结
 
-Vinext 目前还处于实验阶段，但对于 RuiTool AI 这种项目来说，它已经足够稳定。迁移带来的好处是：
+Vinext 目前还处于实验阶段，但对于 RuiToolAI 这种项目来说，它已经足够稳定。迁移带来的好处是：
 
 - 构建速度提升 50%
 - 包体积减少 30%

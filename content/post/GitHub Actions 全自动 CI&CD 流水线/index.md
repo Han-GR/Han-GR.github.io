@@ -11,13 +11,14 @@ tags:
   - GitHubActions
   - CI/CD
   - cloudflare
+  - RuiToolAI
 ---
 
-> 每次 push 自动跑测试、自动部署到 Cloudflare Workers。这篇记录 RuiTool AI 的 CI/CD 搭建过程。
+> 每次 push 自动跑测试、自动部署到 Cloudflare Workers。这篇记录 RuiToolAI 的 CI/CD 搭建过程。
 
 ## 流水线设计
 
-RuiTool AI 的 CI/CD 分两个阶段：
+RuiToolAI 的 CI/CD 分两个阶段：
 
 ```
 Push to main
@@ -153,7 +154,7 @@ GitHub Actions 里的 Secrets 分两种：
 
 在 GitHub 仓库 → Settings → Secrets and variables → Actions 里配置。
 
-RuiTool AI 需要的 Secrets：
+RuiToolAI 需要的 Secrets：
 
 ```
 CLOUDFLARE_API_TOKEN      # Cloudflare API Token（Workers 部署权限）
@@ -273,14 +274,14 @@ jobs:
   run: |
     curl -X POST ${{ secrets.SLACK_WEBHOOK_URL }} \
       -H 'Content-type: application/json' \
-      -d '{"text": "✅ RuiTool AI 部署成功！"}'
+      -d '{"text": "✅ RuiToolAI 部署成功！"}'
 
 - name: Notify on failure
   if: failure()
   run: |
     curl -X POST ${{ secrets.SLACK_WEBHOOK_URL }} \
       -H 'Content-type: application/json' \
-      -d '{"text": "❌ RuiTool AI 部署失败，请检查 GitHub Actions 日志。"}'
+      -d '{"text": "❌ RuiToolAI 部署失败，请检查 GitHub Actions 日志。"}'
 ```
 
 ---

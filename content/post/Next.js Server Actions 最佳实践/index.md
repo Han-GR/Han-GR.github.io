@@ -8,6 +8,7 @@ categories:
   - 前端
 tags:
   - Server-Action
+  - RuiToolAI
 ---
 ## 为什么用 Server Actions 而不是 API Route
 
@@ -162,7 +163,7 @@ AI 生成任务需要轮询状态，这是一个常见的异步模式：
 export const generateImageAction = actionClient
   .inputSchema(generateImageSchema)
   .action(async ({ parsedInput }) => {
-    // 扣积分 + 提交到 Atlas + 存 DB
+    // 扣积分 + 请求大模型 + 存 DB
     return { taskId };
   });
 ```
@@ -182,8 +183,8 @@ export const checkImageStatusAction = actionClient
     }
 
     if (task.status === "processing") {
-      // 去问 Atlas 最新状态
-      const prediction = await atlasCheckPrediction(task.predictionId);
+      // 查看最新状态
+      const prediction = await CheckPrediction(task.predictionId);
       if (prediction.status === "completed") {
         // 存 R2 + 更新 DB
         return { status: "completed", r2Key };

@@ -10,9 +10,10 @@ tags:
   - Tailwind
   - CSS
   - Shadcn
+  - RuiToolAI
 ---
 
-> 暗色模式不只是加个 `dark:` 前缀那么简单。这篇记录我在 RuiTool AI 里搭建完整暗色模式体系的过程。
+> 暗色模式不只是加个 `dark:` 前缀那么简单。这篇记录我在 RuiToolAI 里搭建完整暗色模式体系的过程。
 
 ## 为什么暗色模式容易搞乱
 

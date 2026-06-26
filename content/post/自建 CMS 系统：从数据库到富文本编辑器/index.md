@@ -10,10 +10,11 @@ categories:
   - 后端
 tags:
   - CMS
+  - RuiToolAI
 ---
 ## 为什么自建 CMS
 
-RuiTool AI 需要管理：
+RuiToolAI 需要管理：
 
 - 网站导航（顶部菜单、Footer 链接）
 - 博客文章、文档页面

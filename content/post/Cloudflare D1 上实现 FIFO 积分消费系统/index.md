@@ -10,6 +10,7 @@ categories:
   - 算法&计算机基础
 tags:
   - FIFO
+  - RuiToolAI
 ---
 
 ## 为什么不用简单的余额字段

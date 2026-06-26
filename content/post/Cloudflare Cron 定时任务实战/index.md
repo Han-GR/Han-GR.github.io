@@ -11,11 +11,12 @@ tags:
   - cloudflare
   - Cron
   - Triggers
+  - RuiToolAI
 ---
 
 ## 使用场景
 
-RuiTool AI 的图片生成记录有 7 天有效期，R2 文件会自动删除，但 DB 里的记录不会自动清理。如果不清理，DB 会越来越大，而且历史页面会显示大量"已过期"的空白卡片。
+RuiToolAI 的图片生成记录有 7 天有效期，R2 文件会自动删除，但 DB 里的记录不会自动清理。如果不清理，DB 会越来越大，而且历史页面会显示大量"已过期"的空白卡片。
 
 解决方案：用 Cloudflare Cron Triggers 每天定时清理过期记录。
 

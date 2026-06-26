@@ -8,13 +8,14 @@ categories:
   - 前端
 tags:
   - i18n
+  - RuiToolAI
 ---
 ## 为什么不用 next-intl
 
 `next-intl` 是最流行的 Next.js 国际化方案，但有几个问题：
 
 - 需要在路由层面做语言切换（`/en/xxx`、`/zh/xxx`），改动较大
-- 对于 RuiTool AI 这种主要面向英文用户的产品，路由级别的 i18n 过于复杂
+- 对于 RuiToolAI 这种主要面向英文用户的产品，路由级别的 i18n 过于复杂
 
 所以选择了自建一个轻量的 i18n 方案，核心特点是**编译期类型检查**。
 
@@ -112,7 +113,7 @@ export const en: Record<I18nKey, string> = {
   "sidebar.history": "History",
   "sidebar.adminPanel": "Admin Panel",
 
-  "footer.copyright": "© 2026 RuiTool AI. All rights reserved.",
+  "footer.copyright": "© 2026 RuiToolAI. All rights reserved.",
   "footer.socialXSrOnly": "X (Twitter)",
   "footer.socialInstagramSrOnly": "Instagram",
   "footer.socialEmailSrOnly": "Email",

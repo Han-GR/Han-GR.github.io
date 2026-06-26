@@ -12,7 +12,7 @@ tags:
 ---
 ## 背景
 
-在开发 RuiTool AI 这个全栈 SaaS 项目时，面临一个核心问题：**部署在哪里**？
+在开发 RuiToolAI 这个全栈 SaaS 项目时，面临一个核心问题：**部署在哪里**？
 
 传统方案是买一台 VPS（如阿里云、AWS EC2），装 Docker，跑 Node.js 服务。但作为一个独立开发者，我不希望把时间花在运维上。于是我调研了 Cloudflare Workers 这个 Serverless 方案，最终决定把整个项目跑在它上面。
 
@@ -66,7 +66,7 @@ tags:
 
 ### 1. 全球边缘部署，零冷启动
 
-Workers 部署在 Cloudflare 的全球边缘网络上，用户请求会被路由到最近的节点处理。我测试过从国内访问部署在 Workers 上的 RuiTool AI，响应时间在 100-200ms 左右，而同样的应用部署在美西 VPS 上，延迟在 300-500ms。
+Workers 部署在 Cloudflare 的全球边缘网络上，用户请求会被路由到最近的节点处理。我测试过从国内访问部署在 Workers 上的 RuiToolAI，响应时间在 100-200ms 左右，而同样的应用部署在美西 VPS 上，延迟在 300-500ms。
 
 ### 2. 原生集成 D1/KV/R2
 
@@ -97,7 +97,7 @@ await env.USER_UPLOADS_BUCKET.put(key, buffer);
 
 ## 成本分析
 
-以 RuiTool AI 为例，目前的使用情况：
+以 RuiToolAI 为例，目前的使用情况：
 
 | 服务 | 免费额度 | 当前用量 | 费用 |
 |------|---------|---------|------|
@@ -137,7 +137,7 @@ Workers 不支持 Node.js 原生模块（如 `fs`、`net`、`crypto` 的部分 A
 | 需要 WebSocket 长连接 | 传统 VPS |
 | 低预算、低流量项目 | Cloudflare Workers |
 
-对于 RuiTool AI 这种 SaaS 产品，Workers 是完美的选择。零运维、按量付费、全球低延迟，让独立开发者可以专注于产品本身。
+对于 RuiToolAI 这种 SaaS 产品，Workers 是完美的选择。零运维、按量付费、全球低延迟，让独立开发者可以专注于产品本身。
 
 ## 参考资源
 

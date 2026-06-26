@@ -9,9 +9,10 @@ categories:
   - 编程语言
 tags:
   - TypeScript
+  - RuiToolAI
 ---
 
-> 类型安全不只是"不报红线"。这篇聊聊在 RuiTool AI 里如何让类型从数据库一路贯穿到前端 UI。
+> 类型安全不只是"不报红线"。这篇聊聊在 RuiToolAI 里如何让类型从数据库一路贯穿到前端 UI。
 
 ## 为什么要全栈类型安全
 
@@ -226,7 +227,7 @@ import { z } from "zod";
 
 const envSchema = z.object({
   // 服务端环境变量
-  ATLAS_API_KEY: z.string().min(1),
+  MODEL_API_KEY: z.string().min(1),
   STRIPE_SECRET_KEY: z.string().startsWith("sk_"),
   STRIPE_WEBHOOK_SECRET: z.string().startsWith("whsec_"),
 

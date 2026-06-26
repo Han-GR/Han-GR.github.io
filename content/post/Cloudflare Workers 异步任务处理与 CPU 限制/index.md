@@ -10,11 +10,12 @@ tags:
   - workers
   - CPU
   - Server-Action
+  - RuiToolAI
 ---
 
 ## 问题背景
 
-RuiTool AI 的图片生成流程是：
+RuiToolAI 的图片生成流程是：
 
 ```
 用户提交 prompt → 调用大模型 → 返回预测 ID
@@ -29,7 +30,7 @@ RuiTool AI 的图片生成流程是：
 
 ```typescript
 // 提交任务
-const predictionId = await atlasSubmitImage({ model, prompt });
+const predictionId = await SubmitImage({ model, prompt });
 
 // 保存任务到 DB
 await db.insert(generatedImageTable).values({
@@ -55,7 +56,7 @@ async function runBackgroundPoll({ taskId, predictionId }) {
   for (let attempt = 1; attempt <= 60; attempt++) {
     await new Promise(r => setTimeout(r, 3000));
 
-    const prediction = await atlasCheckPrediction(predictionId);
+    const prediction = await CheckPrediction(predictionId);
 
     if (prediction.status === "completed") {
       // 下载 + 存 R2 + 更新 DB
@@ -77,7 +78,7 @@ Workers 的运行时是 V8 引擎，不是 Node.js。在 Workers 中：
 await new Promise(r => setTimeout(r, 3000));
 ```
 
-这行代码**不会等待 3 秒**。它几乎立即继续执行，导致 60 次轮询瞬间跑完，Workers 进程结束，Atlas 那边还没完成。
+这行代码**不会等待 3 秒**。它几乎立即继续执行，导致 60 次轮询瞬间跑完，Workers 进程结束，但是大模型还没完成。
 
 此外，`waitUntil` 在 Workers 中也有 CPU 时间限制：
 
@@ -102,8 +103,8 @@ export const generateImageAction = actionClient
     // 扣积分
     await ensureBillingAccess({ userId, creditsRequired: 10 });
 
-    // 提交到 Atlas
-    const predictionId = await atlasSubmitImage({ model, prompt });
+    // 提交到大模型
+    const predictionId = await SubmitImage({ model, prompt });
 
     // 存 DB（状态 = processing）
     await db.insert(generatedImageTable).values({
@@ -151,8 +152,8 @@ export const checkImageStatusAction = actionClient
       return { status: "failed" };
     }
 
-    // 还是在 processing → 去问 Atlas 现在状态
-    const prediction = await atlasCheckPrediction(task.predictionId);
+    // 还是在 processing → 查看状态
+    const prediction = await CheckPrediction(task.predictionId);
 
     if (prediction.status === "completed") {
       // 下载图片 + 存 R2 + 更新 DB

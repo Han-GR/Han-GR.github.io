@@ -11,6 +11,7 @@ tags:
   - RSC
   - Zustand
   - nuqs
+  - RuiToolAI
 ---
 
 > 用 RSC 之后，我扔掉了大半个 Redux。这篇聊聊在 Server Components 主导的架构里，状态到底该放哪。
@@ -35,7 +36,7 @@ Server Component → DB → HTML → Browser
 
 ## 状态分类模型
 
-在 RuiTool AI 项目里，我把状态分成四类：
+在 RuiToolAI 项目里，我把状态分成四类：
 
 | 类型     | 存放位置              | 工具              |
 | ------ | ----------------- | --------------- |
@@ -100,7 +101,7 @@ export const deleteImageAction = actionClient
 
 URL 状态的好处：刷新不丢失、可分享、浏览器前进后退正常工作。
 
-在 RuiTool AI 里，管理后台的筛选条件就放在 URL 里：
+在 RuiToolAI 里，管理后台的筛选条件就放在 URL 里：
 
 ```typescript
 // src/app/(admin)/admin/users/page.tsx

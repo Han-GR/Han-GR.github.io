@@ -13,10 +13,11 @@ tags:
   - R2
   - KV
   - cloudflare
+  - RuiToolAI
 ---
 ## 为什么需要三种数据库
 
-RuiTool AI 是一个全栈 SaaS 平台，数据需求多种多样：
+RuiToolAI 是一个全栈 SaaS 平台，数据需求多种多样：
 
 - **用户数据、订单、积分流水**：需要结构化查询、关联查询
 - **Session、API 缓存、页面缓存**：需要极快读写、支持过期时间
@@ -30,7 +31,7 @@ RuiTool AI 是一个全栈 SaaS 平台，数据需求多种多样：
 
 Cloudflare D1 是基于 SQLite 的 Serverless 关系型数据库，兼容 SQLite 语法。
 
-### 在 RuiTool AI 中的使用
+### 在 RuiToolAI 中的使用
 
 D1 存储所有结构化数据：
 
@@ -78,7 +79,7 @@ await db.insert(userTable).values({
 
 Cloudflare KV 是分布式的键值存储，最终一致性模型，全球秒级同步。
 
-### 在 RuiTool AI 中的使用
+### 在 RuiToolAI 中的使用
 
 KV 主要用在两个场景：
 
@@ -118,7 +119,7 @@ Vinext 框架自动用 KV 做 ISR 缓存，每个页面请求都会先查 KV 是
 
 Cloudflare R2 是 S3 兼容的对象存储，最大特点是**不收出口流量费**。
 
-### 在 RuiTool AI 中的使用
+### 在 RuiToolAI 中的使用
 
 R2 存储所有用户生成的文件：
 
@@ -146,7 +147,7 @@ await env.USER_UPLOADS_BUCKET.delete(r2Key);
 
 ### 生命周期规则
 
-R2 支持自动清理过期文件。在 RuiTool AI 中，设置了 7 天生命周期规则，配合 Cron 定时任务清理 DB 记录：
+R2 支持自动清理过期文件。在 RuiToolAI 中，设置了 7 天生命周期规则，配合 Cron 定时任务清理 DB 记录：
 
 ```
 R2 规则：uploads/ 前缀，7 天后自动删除
@@ -177,7 +178,7 @@ Cron 任务：每天凌晨 3 点，删除 DB 中 expiresAt < now 的记录
 ### 场景二：AI 图片生成
 
 ```
-用户提交 → D1 UPDATE credits → D1 INSERT task → Atlas API → R2 PUT image → D1 UPDATE status
+用户提交 → D1 UPDATE credits → D1 INSERT task → Model API → R2 PUT image → D1 UPDATE status
 ```
 
 ### 场景三：页面加载
