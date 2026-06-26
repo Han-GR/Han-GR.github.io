@@ -319,7 +319,7 @@ Lucia Auth 的认证体系：
 
 ## 参考资源
 
-[Lucia Auth](https://lucia-auth.com/) 
-[WebAuthn](https://webauthn.guide/) 
-[SimpleWebAuthn](https://simplewebauthn.dev/) 
-[Arctic OAuth](https://arcticjs.dev/)
+- [Lucia Auth](https://lucia-auth.com/) 
+- [WebAuthn](https://webauthn.guide/) 
+- [SimpleWebAuthn](https://simplewebauthn.dev/) 
+- [Arctic OAuth](https://arcticjs.dev/)

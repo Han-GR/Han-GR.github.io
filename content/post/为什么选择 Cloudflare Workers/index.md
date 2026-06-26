@@ -141,7 +141,6 @@ Workers 不支持 Node.js 原生模块（如 `fs`、`net`、`crypto` 的部分 A
 
 ## 参考资源
 
-[Cloudflare Workers](https://developers.cloudflare.com/workers/) 
-[Vinext](https://vinext.io/) 
-[D1](https://developers.cloudflare.com/d1/) 
-[R2](https://developers.cloudflare.com/r2/)
+- [Cloudflare Workers](https://developers.cloudflare.com/workers/) 
+- [D1](https://developers.cloudflare.com/d1/) 
+- [R2](https://developers.cloudflare.com/r2/)
