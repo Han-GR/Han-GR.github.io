@@ -248,5 +248,5 @@ useEffect(() => {
 
 ## 参考资源
 
-[Cloudflare Workers waitUntil](https://developers.cloudflare.com/workers/runtime-apis/context/) 
-[Next.js Server Actions](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations) 
+- [Cloudflare Workers waitUntil](https://developers.cloudflare.com/workers/runtime-apis/context/) 
+- [Next.js Server Actions](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations) 

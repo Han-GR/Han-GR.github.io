@@ -7,6 +7,7 @@ image: FIFO.jpg
 categories:
   - 架构设计
   - 数据库&缓存
+  - 算法&计算机基础
 tags:
   - FIFO
 ---
@@ -211,6 +212,6 @@ FIFO 消费桶模型比简单余额复杂，但提供了：
 
 ## 参考资源
 
-[Drizzle ORM](https://orm.drizzle.team/) 
-[Cloudflare D1](https://developers.cloudflare.com/d1/) 
-[FIFO 算法](https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics))
+- [Drizzle ORM](https://orm.drizzle.team/) 
+- [Cloudflare D1](https://developers.cloudflare.com/d1/) 
+- [FIFO 算法](https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics))
