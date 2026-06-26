@@ -381,4 +381,3 @@ test("用户可以生成图片", async ({ page }) => {
 - [Playwright Page Object Model](https://playwright.dev/docs/pom)
 - [SQLite WAL 模式](https://www.sqlite.org/wal.html)
 
-**标签**：`Vitest` `Playwright` `e2e测试` `SQLite` `CI/CD` `测试策略`
