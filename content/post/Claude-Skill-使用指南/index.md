@@ -1,13 +1,13 @@
 ---
-title: "Claude Skill 使用指南"
+title: Claude Skill 使用指南
 description: ""
 slug: 2026-02-24-Claude-Skill-使用指南
 date: 2026-02-24
-image: ""
+image: claude-skill.jpg
 categories:
-  - "效率&工具"
+  - 效率&工具
 tags:
-  - "Claude Skill"
+  - Claude-Skill
 ---
 
 ## 1.  概念：Agent Skill
