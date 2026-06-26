@@ -30,7 +30,7 @@ RuiToolAI 是一个全栈 SaaS 平台，数据需求多种多样：
 ### D1：关系型数据库
 
 Cloudflare D1 是基于 SQLite 的 Serverless 关系型数据库，兼容 SQLite 语法。
-#### 在 RuiTool AI 中的使用
+#### 在 RuiToolAI 中的使用
 
 D1 存储所有结构化数据：
 
@@ -87,7 +87,7 @@ await db.insert(userTable).values({
 
 Cloudflare KV 是分布式的键值存储，最终一致性模型，全球秒级同步。
 
-#### 在 RuiTool AI 中的使用
+#### 在 RuiToolAI 中的使用
 
 KV 主要用在两个场景：
 
@@ -126,7 +126,7 @@ Vinext 框架自动用 KV 做 ISR 缓存，每个页面请求都会先查 KV 是
 
 Cloudflare R2 是 S3 兼容的对象存储，最大特点是**不收出口流量费**。
 
-#### 在 RuiTool AI 中的使用
+#### 在 RuiToolAI 中的使用
 R2 存储所有用户生成的文件：
 ```typescript
 // 存储 AI 生成的图片
