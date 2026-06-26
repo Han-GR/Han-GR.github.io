@@ -8,7 +8,7 @@ categories:
   - 前端
 tags:
   - 浏览器扩展插件
-  - Tab Eraser
+  - Tab-Eraser
 ---
 
 ### 背景

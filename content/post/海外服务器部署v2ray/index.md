@@ -11,7 +11,7 @@ tags:
   - vutrl
   - dynadot
   - clash
-  - clash verge
+  - clash-verge
 ---
 
 ## 介绍
