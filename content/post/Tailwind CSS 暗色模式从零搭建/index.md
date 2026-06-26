@@ -341,4 +341,3 @@ export function Testimonials() {
 - [Shadcn UI 主题配置](https://ui.shadcn.com/docs/theming)
 - [next-themes 库](https://github.com/pacocoursey/next-themes)
 
-**标签**：`Tailwind CSS` `暗色模式` `CSS变量` `Shadcn UI` `主题切换`
