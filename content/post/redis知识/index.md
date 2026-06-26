@@ -8,8 +8,8 @@ categories:
   - 后端
 tags:
   - redis
-  - Spring Data
-  - Spring Data Redis
+  - Spring-Data
+  - Spring-Data-Redis
 ---
 
 ### Redis
