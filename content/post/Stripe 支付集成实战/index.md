@@ -229,6 +229,6 @@ Stripe 集成的关键点：
 
 ## 参考资源
 
-[Stripe Checkout](https://stripe.com/docs/checkout) 
-[Stripe Webhooks](https://stripe.com/docs/webhooks) 
-[Stripe CLI](https://stripe.com/docs/stripe-cli)
+- [Stripe Checkout](https://stripe.com/docs/checkout) 
+- [Stripe Webhooks](https://stripe.com/docs/webhooks) 
+- [Stripe CLI](https://stripe.com/docs/stripe-cli)
