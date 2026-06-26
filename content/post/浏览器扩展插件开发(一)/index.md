@@ -1,14 +1,14 @@
 ---
-title: "浏览器扩展插件开发(一)"
+title: 浏览器扩展插件开发(一)
 description: ""
 slug: 2024-11-13-浏览器扩展插件开发(一)
 date: 2024-11-13
-image: ""
+image: extensions.jpg
 categories:
-  - "前端"
+  - 前端
 tags:
-  - "浏览器扩展"
-  - "Auto Tab Grouper"
+  - 浏览器扩展
+  - Auto Tab Grouper
 ---
 
 ### 背景
@@ -24,9 +24,9 @@ tags:
 - 浏览器本身就有标签页分组功能,我只需要在原生的分组功能上改动即可
 - 最后,我成功的开发了一个浏览器插件,可以整理好标签栏,把标签栏分组,看起来更整洁。
 - 可自动根据网站域名分组
-    - ![image](assets/file-20260310211251426.png)
+    - ![](assets/file-20260626164423738.png)
 - 可自定义分组名称
-    - ![image](assets/file-20260310211216401.png)
+    - ![](assets/file-20260626164453057.png)
 
 
 ### 发布

@@ -1,14 +1,14 @@
 ---
-title: "浏览器扩展插件开发(二)"
+title: 浏览器扩展插件开发(二)
 description: ""
 slug: 2025-07-24-浏览器扩展插件开发(二)
 date: 2025-07-24
-image: ""
+image: extensions.jpg
 categories:
-  - "前端"
+  - 前端
 tags:
-  - "浏览器扩展插件"
-  - "Tab Eraser"
+  - 浏览器扩展插件
+  - Tab Eraser
 ---
 
 ### 背景
