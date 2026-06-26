@@ -9,6 +9,7 @@ categories:
 tags:
   - cloudflare
   - workers
+  - RuiToolAI
 ---
 ## 背景
 

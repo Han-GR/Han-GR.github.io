@@ -3,7 +3,7 @@ title: Vinext：用 Vite 替代 Next.js 构建
 description: ""
 slug: 2026-03-21-Vinext：用 Vite 替代 Next.js 构建
 date: 2026-03-21
-image: vinext.vaif
+image: vinext.png
 categories:
   - 运维&云原生
   - 效率&工具
