@@ -25,7 +25,7 @@ Cloudflare Workers 没有文件系统，不能像 Node.js 那样 `fs.writeFile()
 
 ## 分桶策略
 
-RuiTool AI 用两个 R2 Bucket 隔离不同用途的文件：
+RuiToolAI 用两个 R2 Bucket 隔离不同用途的文件：
 
 | Bucket | 用途 | 访问权限 |
 |--------|------|----------|

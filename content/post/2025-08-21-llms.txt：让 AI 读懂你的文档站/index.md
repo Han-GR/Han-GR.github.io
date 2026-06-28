@@ -113,7 +113,7 @@ export function buildDocsLlmsTxtContent(
 生成的 `llms.txt` 类似：
 
 ```
-# RuiTool AI Documentation
+# RuiToolAI Documentation
 
 ## Getting Started
 > Quick start guide for new users

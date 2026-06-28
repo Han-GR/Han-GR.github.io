@@ -17,7 +17,7 @@ tags:
 
 ## KV 在项目中的角色
 
-RuiTool AI 用一个 KV Namespace 承担了多种职责：
+RuiToolAI 用一个 KV Namespace 承担了多种职责：
 
 | 用途 | Key 前缀 | 过期策略 |
 |------|----------|----------|

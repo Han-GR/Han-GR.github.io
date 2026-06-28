@@ -18,7 +18,7 @@ tags:
 
 不限制的话，一个用户可以在无数设备上登录，Session 数据无限膨胀。另外还有安全考虑：如果账号被盗，攻击者可以无限创建 Session。
 
-RuiTool AI 设置为 **每个用户最多 5 个 Session**。
+RuiToolAI 设置为 **每个用户最多 5 个 Session**。
 
 ## Session 存储设计
 

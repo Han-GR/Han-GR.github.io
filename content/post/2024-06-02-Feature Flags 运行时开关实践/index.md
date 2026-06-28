@@ -21,7 +21,7 @@ Feature Flags 解决几个问题：
 
 ## 实现方式
 
-RuiTool AI 的 Feature Flags 基于环境变量：
+RuiToolAI 的 Feature Flags 基于环境变量：
 
 ```typescript
 // src/flags.ts

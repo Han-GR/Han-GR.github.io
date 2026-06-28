@@ -37,7 +37,7 @@ export const users = sqliteTable("users", {
 
 ## 项目中的迁移历史
 
-RuiTool AI 从零开始经历了 12 次迁移：
+RuiToolAI 从零开始经历了 12 次迁移：
 
 | 迁移 | 内容 |
 |------|------|

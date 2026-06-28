@@ -12,7 +12,7 @@ tags:
   - RuiToolAI
 ---
 
-> 比密码更安全，比短信验证码更方便。聊聊 Passkey 在 RuiTool AI 中的落地。
+> 比密码更安全，比短信验证码更方便。聊聊 Passkey 在 RuiToolAI 中的落地。
 
 ## 什么是 Passkey
 
@@ -186,4 +186,4 @@ export const generateAuthenticationOptionsAction = actionClient
 
 ## 总结
 
-Passkey 是目前最安全的认证方式之一。RuiTool AI 同时支持密码登录和 Passkey 登录，用户可以在设置中自行添加。实现上依赖 `@simplewebauthn/server` 库，核心代码不到 200 行。
+Passkey 是目前最安全的认证方式之一。RuiToolAI 同时支持密码登录和 Passkey 登录，用户可以在设置中自行添加。实现上依赖 `@simplewebauthn/server` 库，核心代码不到 200 行。

@@ -17,7 +17,7 @@ tags:
 
 ## Sitemap 自动生成
 
-RuiTool AI 的 sitemap 是全自动的，每次 CMS 内容变更后重新生成：
+RuiToolAI 的 sitemap 是全自动的，每次 CMS 内容变更后重新生成：
 
 ```typescript
 // src/app/sitemap.ts
