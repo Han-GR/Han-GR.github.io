@@ -3,13 +3,15 @@ title: 在 Cloudflare Workers + D1 上实现用户邀请系统
 description: ""
 slug: 2026-07-02-在 Cloudflare Workers + D1 上实现用户邀请系统
 date: 2026-07-02
-image: ""
+image: referral.png
 categories:
   - 数据库&缓存
   - 架构设计
 tags:
   - cloudflare
   - D1
+  - Referral
+  - RuiToolAI
 ---
 
 我最近在 [RuiToolAi](https://ruitoolai.com) 中实现了一套完整的用户邀请（Referral）功能，涵盖注册、奖励发放、统计展示等全链路。技术栈是 Next.js App Router + Cloudflare Workers (Vinext) + D1 + Drizzle ORM。
