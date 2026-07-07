@@ -42,6 +42,7 @@ comments: false
 - [tabler](https://tabler.io/): icons
 - [lucide](https://lucide.dev/): icons
 - [Linux命令大全](https://www.linuxcool.com/): Linux命令在线查询手册
+- [zamzar](https://www.zamzar.com/): 文件转换工具
 
 ### 娱乐
 
