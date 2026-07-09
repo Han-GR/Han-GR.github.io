@@ -11,6 +11,7 @@ categories:
 tags:
   - SSE
   - PostgreSQL
+  - DevAssist
 ---
 
 这一阶段做的事情很集中：把 `/chat` 从“能用”推到“更像真实产品”。
@@ -39,12 +40,13 @@ flowchart LR
 ### 1.2 演进路线（能力逐步补齐）
 
 ```mermaid
-flowchart TD
+flowchart LR
   S1["多轮对话<br>客户端携带 history"] --> S2["SSE 流式输出"]
   S2 --> S3["路由拆分<br>main.py 变薄"]
   S3 --> S4["Postgres + Alembic Async<br>建表 conversations + messages"]
   S4 --> S5["chat 持久化<br>DB 历史 + 写消息 + 流式落库"]
 ```
+
 
 ## 2. 多轮对话（conversation_id + history）
 
