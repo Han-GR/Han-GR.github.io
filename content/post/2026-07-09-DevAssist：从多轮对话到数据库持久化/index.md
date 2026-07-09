@@ -21,9 +21,9 @@ tags:
 - **工程结构**：路由拆分，入口文件不再堆逻辑
 - **数据沉淀**：接入 PostgreSQL，把会话和消息存下来
 
-## 0. 两张图（先看全貌）
+## 1. 两张图（先看全貌）
 
-### 0.1 架构流（请求怎么走）
+### 1.1 架构流（请求怎么走）
 
 ```mermaid
 flowchart LR
@@ -36,7 +36,7 @@ flowchart LR
   API -->|SessionLocal| SA[SQLAlchemy Async]
 ```
 
-### 0.2 演进路线（能力逐步补齐）
+### 1.2 演进路线（能力逐步补齐）
 
 ```mermaid
 flowchart TD
@@ -46,7 +46,7 @@ flowchart TD
   S4 --> S5["chat 持久化<br>DB 历史 + 写消息 + 流式落库"]
 ```
 
-## 1. 多轮对话（conversation_id + history）
+## 2. 多轮对话（conversation_id + history）
 
 目标：先把“多轮”跑通。最省事的方式就是 **客户端随请求带 history**，服务端拼 messages 直接喂给 LLM。
 
@@ -90,7 +90,7 @@ async def chat(payload: ChatRequest, stream: bool = False) -> ChatResponse | Str
     messages.append({"role": "user", "content": payload.message})
 ```
 
-## 2. SSE 流式输出（meta/delta/done）
+## 3. SSE 流式输出（meta/delta/done）
 
 目标：让回复“边生成边看到”。用 SSE（text/event-stream），因为它对浏览器天然友好，不用引入 WebSocket 的复杂度。
 
@@ -129,7 +129,7 @@ async def openai_chat_stream_to_sse(
     yield sse_event(data={"type": "done"}, event="done")
 ```
 
-## 3. 路由拆分（main.py 变薄）
+## 4. 路由拆分（main.py 变薄）
 
 目标：把入口文件从“堆逻辑”变成“只做注册”。
 
@@ -139,7 +139,7 @@ async def openai_chat_stream_to_sse(
 2. 注册全局错误处理器
 3. `include_router(chat_router)`
 
-## 4. PostgreSQL + Alembic Async（建表 + 迁移）
+## 5. PostgreSQL + Alembic Async（建表 + 迁移）
 
 目标：先把“能存”这套基础设施搭起来。
 
@@ -193,11 +193,11 @@ async def run_migrations_online() -> None:
     await connectable.dispose()
 ```
 
-## 5. /chat 持久化（DB 历史 + 写消息 + 流式落库）
+## 6. /chat 持久化（DB 历史 + 写消息 + 流式落库）
 
 目标：让 `conversation_id` 真正变成“服务端可读写的会话主键”，而不是仅仅给前端串联用。
 
-### 5.1 历史加载策略：传了 conversation_id 就以 DB 为准
+### 6.1 历史加载策略：传了 conversation_id 就以 DB 为准
 
 规则很直接：
 
@@ -216,7 +216,7 @@ else:
 messages.append({"role": "user", "content": payload.message})
 ```
 
-### 5.2 非流式：拿到完整回复后“一次性写入一轮对话”
+### 6.2 非流式：拿到完整回复后“一次性写入一轮对话”
 
 具体实现：`backend/app/api/chat.py`（非流式写入一轮）
 
@@ -229,7 +229,7 @@ async def persist_turn_to_db(conversation_id: UUID, user: str, assistant: str) -
         await session.commit()
 ```
 
-### 5.3 流式：先写 user，再在 finally 里写完整 assistant
+### 6.3 流式：先写 user，再在 finally 里写完整 assistant
 
 流式最大的坑就是：回复是碎片（delta）。
 
@@ -266,7 +266,7 @@ if stream:
                 await persist_assistant_message_to_db(conversation_id, assistant_text)
 ```
 
-## 6. 本地验证（按顺序跑）
+## 7. 本地验证（按顺序跑）
 
 只列最关键的几条命令，按顺序执行即可：
 
