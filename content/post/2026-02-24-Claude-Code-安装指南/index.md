@@ -63,7 +63,7 @@ npm install -g @anthropic-ai/claude-code --registry=https://registry.npmmirror.c
 
 ### 方案一：通过命令行设置环境变量
 
-我们需要配置 `BASE_URL` 和 `API_KEY`
+需要配置 `BASE_URL` 和 `API_KEY`
 为了避免每次重启终端丢失配置，以下命令将直接写入系统**永久环境变量**。
 
 *   **智谱 GLM Base URL**: [https://open.bigmodel.cn/api/anthropic](https://open.bigmodel.cn/api/anthropic)

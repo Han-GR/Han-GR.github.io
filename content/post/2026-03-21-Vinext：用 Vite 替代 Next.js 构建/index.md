@@ -24,7 +24,7 @@ RuiToolAI 最初是用标准 Next.js 开发的。但部署到 Cloudflare Workers
 
 ## Vinext 是什么
 
-2026年2月24日，Cloudflare 正式发布了 Vinext。这也是我们从 OpenNext 迁移过来的直接契机——官方工具出来了，没理由继续用绕弯子的方案。
+2026年2月24日，Cloudflare 正式发布了 Vinext。这也是从 OpenNext 迁移过来的直接契机——官方工具出来了，没理由继续用绕弯子的方案。
 
 Vinext 是 Cloudflare 的一个实验性项目，核心思路是：**用 Vite 实现 Next.js 的公开 API 接口**。
 
