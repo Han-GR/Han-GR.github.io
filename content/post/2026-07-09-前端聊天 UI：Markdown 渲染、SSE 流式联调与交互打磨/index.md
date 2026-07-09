@@ -389,3 +389,7 @@ docker compose logs -f migrate
 - `streamChat` 当前只处理最小协议字段，后续如果需要 citations/tool-calls 等结构化数据，可在事件模型里扩展并保持向后兼容
 - `api.ts` 已提供非流式 typed client；后续可以把 ChatApp 的非流式模式也接到 api client 上，统一错误策略与 request_id 展示
 
+## 10.最终效果
+
+![](assets/file-20260709200811354.png)
+
