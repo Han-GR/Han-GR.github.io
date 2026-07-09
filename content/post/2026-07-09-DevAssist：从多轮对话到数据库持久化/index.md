@@ -41,10 +41,10 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-  S1["多轮对话<br>客户端携带 history"] --> S2["SSE 流式输出"]
-  S2 --> S3["路由拆分<br>main.py 变薄"]
-  S3 --> S4["Postgres + Alembic Async<br>建表 conversations + messages"]
-  S4 --> S5["chat 持久化<br>DB 历史 + 写消息 + 流式落库"]
+  S1["多轮对话，客户端携带 history"] --> S2["SSE 流式输出"]
+  S2 --> S3["路由拆分，main.py 变薄"]
+  S3 --> S4["Postgres + Alembic Async建表 conversations + messages"]
+  S4 --> S5["chat 持久化，DB 历史 + 写消息 + 流式落库"]
 ```
 
 
