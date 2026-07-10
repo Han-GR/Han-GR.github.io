@@ -1,7 +1,7 @@
 ---
-title: 前端聊天 UI：Markdown 渲染、SSE 流式联调与交互打磨
+title: DevAssist 前端聊天 UI：Markdown 渲染、SSE 流式联调与交互打磨
 description: ""
-slug: 2026-07-10-前端聊天 UI：Markdown 渲染、SSE 流式联调与交互打磨
+slug: 2026-07-10-DevAssist 前端聊天 UI：Markdown 渲染、SSE 流式联调与交互打磨
 date: 2026-07-10
 image: chat-ui.png
 categories:
