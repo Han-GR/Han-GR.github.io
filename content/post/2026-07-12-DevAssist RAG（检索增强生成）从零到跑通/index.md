@@ -911,6 +911,23 @@ docker compose run --rm backend python scripts/eval_runner.py \
 - emb_faithfulness = cosine(answer, contexts_joined)
 - emb_context_recall = cosine(reference_answer, contexts_joined)
 
+## 6.3 离线评测结果
+
+说明：
+- 这是离线评测（`--no-llm`），不调用 LLM 生成答案，主要衡量“检索 + 重排 + context 拼接”是否把关键资料找回来了。
+- 数据集是中文问答，知识库是英文文档，因此优先参考 embedding 版本指标（跨语言更稳定）。
+
+结果摘要（avg，embedding 版本）：
+
+| 配置 | 知识库集合（collection） | Top-K | 候选扩展倍数（candidate_multiplier） | 重排阈值（rerank_min_score） | 平均 embedding 相关性（emb_relevance） | 平均 embedding 忠实度（emb_faithfulness） | 平均 embedding 召回率（emb_context_recall） |
+|---|---|---:|---:|---:|---:|---:|---:|
+| 基线（512） | fastapi_docs | 5 | 4 | 0.0 | 0.627 | 0.542 | 0.542 |
+| 调参（512） | fastapi_docs | 5 | 6 | 0.0 | 0.627 | 0.543 | 0.543 |
+| chunk 对比（800） | fastapi_docs_cs800 | 5 | 4 | 0.0 | 0.627 | 0.546 | 0.546 |
+
+原始报告与结果文件位置：
+- 报告：`data/eval_reports/fastapi_rag_report.md`
+- 输出：`data/eval_reports/*.json`
 ---
 
 ## 7. 评测数据集长什么样
