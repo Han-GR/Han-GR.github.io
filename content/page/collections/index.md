@@ -76,3 +76,4 @@ comments: false
 - [openrouter](https://openrouter.ai/): ‌AI 模型聚合平台，通过统一 API 接口接入全球数百种大模型
 - [x/Twitter](https://x.com): 推广社交平台
 - [instagram](https://www.instagram.com): 推广社交平台
+- [pomelli](https://labs.google.com/pomelli/): 谷歌出品的推广神器
