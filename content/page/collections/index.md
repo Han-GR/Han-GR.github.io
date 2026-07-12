@@ -43,6 +43,7 @@ comments: false
 - [tabler](https://tabler.io/): icons
 - [lucide](https://lucide.dev/): icons
 - [icon.kitchen](https://icon.kitchen/): icons
+- [logofa](https://logofa.st/): logo
 - [Linux命令大全](https://www.linuxcool.com/): Linux命令在线查询手册
 - [zamzar](https://www.zamzar.com/): 文件转换工具
 
