@@ -38,6 +38,7 @@ comments: false
 - [SMS-Hero](https://sms-hero.com/)：免费短信验证码服务
 - [USAddressGen](https://usaddressgen.com/)：美国地址生成工具
 - [API](https://api.mmp.cc/)：免费API
+- [publicapis](https://publicapis.io/): 免费API
 - [Yandex](https://yandex.com/)：搜索引擎
 - [tabler](https://tabler.io/): icons
 - [lucide](https://lucide.dev/): icons
