@@ -1,8 +1,8 @@
 ---
 title: DevAssist Agent 系统：从工具调用到可观测性
 description: ""
-slug: 2026-07-13-DevAssist Agent 系统：从工具调用到可观测性
-date: 2026-07-13
+slug: 2026-07-14-DevAssist Agent 系统：从工具调用到可观测性
+date: 2026-07-14
 image: agent.png
 categories:
   - 架构设计
