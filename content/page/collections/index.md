@@ -71,6 +71,7 @@ comments: false
 - [cloudflare](https://cloudflare.com/): 赛博菩萨
 - [vultr](https://www.vultr.com/): 云计算服务提供商
 - [dynadot](https://www.dynadot.com/): 域名注册商
+- [figma](https://www.figma.com/): 为UI 设计而生的设计工具
 - [resend](https://resend.com/): 专为开发者设计的电子邮件 API
 - [stripe](https://dashboard.stripe.com/): 全球在线支付服务商
 - [paypal](https://www.paypal.com/): 在线支付服务商
