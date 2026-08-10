@@ -16,6 +16,7 @@ comments: false
 - [Stack Overflow](https://stackoverflow.com/)：高质量编程问答与排障参考
 - [Hacker News](https://news.ycombinator.com/)：程序员资讯与产品/技术讨论
 - [V2EX](https://www.v2ex.com/)：中文技术社区与日常话题
+- [middlefun](https://www.middlefun.com/): # 知识型兴趣社区
 - [掘金](https://juejin.cn/)：中文技术文章与实战分享
 - [SegmentFault](https://segmentfault.com/)：中文技术问答与专栏
 - [DEV Community](https://dev.to/)：英文开发者社区与技术文章
