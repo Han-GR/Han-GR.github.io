@@ -67,6 +67,8 @@ comments: false
 - [firecrawl](https://www.firecrawl.dev/): [[mcp]] 让AI自动抓取和理解网页内容
 - [context7](https://context7.com/): [[mcp]] 帮AI获取到最新的技术文档
 - [skillsmp](https://skillsmp.com/): [[skill]]  AI skills查询网站
+- [modelscope](https://www.modelscope.ai/): 开源模型社区，汇集业界最新最热的模型、数据集以及创空间应用
+- [modelscope中文](https://modelscope.cn/home): 开源模型社区，汇集业界最新最热的模型、数据集以及创空间应用
 
 ### 工作流
 
