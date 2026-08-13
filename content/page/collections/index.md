@@ -69,6 +69,7 @@ comments: false
 - [skillsmp](https://skillsmp.com/): [[skill]]  AI skills查询网站
 - [modelscope](https://www.modelscope.ai/): 开源模型社区，汇集业界最新最热的模型、数据集以及创空间应用
 - [modelscope中文](https://modelscope.cn/home): 开源模型社区，汇集业界最新最热的模型、数据集以及创空间应用
+- [huggingface](https://huggingface.co/): 开发模型、数据集和应用的平台
 
 ### 工作流
 
