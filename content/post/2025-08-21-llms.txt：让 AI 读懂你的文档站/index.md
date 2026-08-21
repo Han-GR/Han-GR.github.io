@@ -15,14 +15,14 @@ tags:
   - RuiToolAI
 ---
 
-> llms.txt 是给 AI 看的 sitemap。一行代码，让 LLM 能结构化地理解你的整个文档站。
+> `llms.txt` 可以看成面向 LLM 的文档索引。它列出页面标题、简介和 URL，让工具先找到页面，再读取具体内容。
 
 
 ## 什么是 llms.txt
 
-`llms.txt` 是一个新兴的 Web 标准，类似于 `robots.txt` 但面向 AI/LLM。
+`llms.txt` 是一份面向 AI/LLM 的约定文件，形式上有点像 `robots.txt`。
 
-它的作用：**让 AI 模型（如 ChatGPT、Claude）能高效地爬取和理解你的文档站结构**。
+它的作用是把文档站的结构集中写在一个可读文件中，便于 AI 工具定位需要的页面。
 
 当用户问 AI "这个产品怎么用"时，AI 可以先读 `llms.txt` 了解文档结构，再精准获取需要的页面。
 

@@ -15,7 +15,7 @@ tags:
   - RuiToolAI
 ---
 
-> 测试不是可选项。这篇记录 RuiToolAI 的测试体系搭建，以及踩过的 SQLite 并发锁这个大坑。
+> RuiToolAI 的测试分为 Vitest 单元/集成测试和 Playwright e2e 测试。搭建过程中最难查的问题，是 e2e 并发执行时触发的 SQLite 锁。
 
 ## 测试策略
 
@@ -381,4 +381,3 @@ test("用户可以生成图片", async ({ page }) => {
 - [Playwright 文档](https://playwright.dev/)
 - [Playwright Page Object Model](https://playwright.dev/docs/pom)
 - [SQLite WAL 模式](https://www.sqlite.org/wal.html)
-

@@ -12,7 +12,7 @@ tags:
   - RuiToolAI
 ---
 
-> 一个用户最多 5 个 Session，超出自动踢掉最早的。聊聊 Session 管理的实现细节。
+> RuiToolAI 把每个用户的 Session 上限设为 5 个，超出时删除最早登录的那一个。这里记录存储、淘汰和设备管理的做法。
 
 ## 为什么限制 Session 数量
 

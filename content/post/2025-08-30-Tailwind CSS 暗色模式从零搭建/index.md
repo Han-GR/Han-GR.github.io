@@ -13,7 +13,7 @@ tags:
   - RuiToolAI
 ---
 
-> 暗色模式不只是加个 `dark:` 前缀那么简单。这篇记录我在 RuiToolAI 里搭建完整暗色模式体系的过程。
+> 给几个组件加 `dark:` 并不难，真正容易出问题的是主题初始化闪烁、硬编码颜色和第三方组件不同步。这里记录 RuiToolAI 的处理方式。
 
 ## 为什么暗色模式容易搞乱
 
@@ -341,4 +341,3 @@ export function Testimonials() {
 - [Tailwind CSS Dark Mode 文档](https://tailwindcss.com/docs/dark-mode)
 - [Shadcn UI 主题配置](https://ui.shadcn.com/docs/theming)
 - [next-themes 库](https://github.com/pacocoursey/next-themes)
-

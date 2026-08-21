@@ -12,7 +12,7 @@ tags:
   - RuiToolAI
 ---
 
-> CMS 需要一个好用的编辑器。Tiptap 是 ProseMirror 的 React 封装，扩展性极强。
+> RuiToolAI 的 CMS 不只要编辑文字，还要插入图片、代码块和自定义内容。我选 Tiptap，主要是因为它可以在 ProseMirror 之上继续扩展节点和行为。
 
 ## 为什么选 Tiptap
 

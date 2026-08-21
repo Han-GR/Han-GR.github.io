@@ -80,7 +80,7 @@ await new Promise(r => setTimeout(r, 3000));
 
 这行代码**不会等待 3 秒**。它几乎立即继续执行，导致 60 次轮询瞬间跑完，Workers 进程结束，但是大模型还没完成。
 
-此外，`waitUntil` 在 Workers 中也有 CPU 时间限制：
+`waitUntil` 在 Workers 中也受 CPU 时间限制：
 
 | 计划 | CPU 限制 |
 |------|---------|

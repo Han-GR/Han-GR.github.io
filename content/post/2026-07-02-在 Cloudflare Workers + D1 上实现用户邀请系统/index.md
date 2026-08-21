@@ -14,9 +14,9 @@ tags:
   - RuiToolAI
 ---
 
-我最近在 [RuiToolAi](https://ruitoolai.com) 中实现了一套完整的用户邀请（Referral）功能，涵盖注册、奖励发放、统计展示等全链路。技术栈是 Next.js App Router + Cloudflare Workers (Vinext) + D1 + Drizzle ORM。
+我最近给 [RuiToolAi](https://ruitoolai.com) 加了用户邀请（Referral）功能：注册时记录邀请关系，被邀请人首次付费后再发放奖励。项目使用 Next.js App Router、Cloudflare Workers (Vinext)、D1 和 Drizzle ORM。
 
-这篇文章记录整个设计思路和实现细节，包括在 D1 不支持事务的约束下如何保证数据一致性。
+下面重点记录数据模型、奖励触发条件，以及 D1 不支持事务时的一致性处理。
 
 ---
 

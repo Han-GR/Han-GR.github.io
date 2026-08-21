@@ -14,7 +14,7 @@ tags:
   - RuiToolAI
 ---
 
-> 用 RSC 之后，我扔掉了大半个 Redux。这篇聊聊在 Server Components 主导的架构里，状态到底该放哪。
+> 用 RSC 重整 RuiToolAI 后，我删掉了不少原本放在 Redux 里的状态。问题也随之变成：哪些数据应该留在服务端，哪些才值得进客户端 store？
 
 ## 背景：RSC 改变了什么
 
@@ -389,7 +389,7 @@ RSC 架构下的状态管理原则：
 3. **客户端全局** → Zustand，只放真正需要跨组件共享的少量状态
 4. **表单** → react-hook-form，局部管理
 
-这套分层策略让代码更简单，性能更好，也更容易维护。
+这样分层后，全局 store 只留真正跨组件的客户端状态，服务端数据也不必再复制一份到 Redux 中。
 
 ---
 
@@ -399,4 +399,3 @@ RSC 架构下的状态管理原则：
 - [nuqs 文档](https://nuqs.47ng.com/)
 - [Zustand 文档](https://zustand-demo.pmnd.rs/)
 - [react-hook-form 文档](https://react-hook-form.com/)
-

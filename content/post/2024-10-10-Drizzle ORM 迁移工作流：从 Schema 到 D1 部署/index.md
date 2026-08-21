@@ -14,7 +14,7 @@ tags:
   - RuiToolAI
 ---
 
-> Schema 改一行，一条命令生成 SQL，再一条命令部署到 D1。Drizzle 的迁移工作流让数据库变更从未如此简单。
+> RuiToolAI 的数据库变更从 Schema 开始：Drizzle Kit 生成 SQL，确认迁移内容后再部署到 D1。
 
 ## Drizzle 的迁移哲学
 

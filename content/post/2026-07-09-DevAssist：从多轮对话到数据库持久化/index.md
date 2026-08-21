@@ -14,11 +14,11 @@ tags:
   - DevAssist
 ---
 
-这一阶段做的事情很集中：把 `/chat` 从“能用”推到“更像真实产品”。
+第一版 `/chat` 只能返回一次性答案。这一阶段把它拆成路由和服务层，加上 SSE 流式输出，再用 PostgreSQL 保存会话与消息。
 
-可以理解为三条主线：
+改动分为三部分：
 
-- **体验**：支持 SSE 流式输出（先看到字再说）
+- **体验**：支持 SSE 流式输出
 - **工程结构**：路由拆分，入口文件不再堆逻辑
 - **数据沉淀**：接入 PostgreSQL，把会话和消息存下来
 
@@ -288,4 +288,3 @@ curl -N http://localhost:8000/chat?stream=true \
   -H 'content-type: application/json' \
   -d '{"message":"hello"}'
 ```
-

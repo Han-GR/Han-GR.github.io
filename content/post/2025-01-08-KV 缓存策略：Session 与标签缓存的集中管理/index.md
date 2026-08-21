@@ -13,7 +13,7 @@ tags:
   - RuiToolAI
 ---
 
-> Cloudflare KV 是 Workers 的"Redis"。聊聊如何用它做 Session 存储、数据缓存和 Rate Limiting。
+> RuiToolAI 没有另外部署 Redis，Session、短期 token、限流计数和页面缓存都放在 Cloudflare KV 里。共用一个 Namespace 后，key 命名和过期策略必须统一管理。
 
 ## KV 在项目中的角色
 

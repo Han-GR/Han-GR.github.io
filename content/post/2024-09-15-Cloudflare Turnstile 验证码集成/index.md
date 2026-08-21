@@ -12,7 +12,7 @@ tags:
   - RuiToolAI
 ---
 
-> 不想用 Google reCAPTCHA？试试 Cloudflare 的 Turnstile——免费、无感、不追踪用户。
+> RuiToolAI 需要在注册入口拦截脚本，又不想让用户反复挑红绿灯图片，所以最后接入了 Cloudflare Turnstile。
 
 ## 为什么选 Turnstile
 
@@ -168,4 +168,4 @@ export const signUpAction = actionClient
 
 ## 总结
 
-Turnstile 集成不到 50 行代码，配合 Feature Flag 实现了环境无关的开关控制。对于部署在 Cloudflare 上的项目来说，这是最自然的选择。
+Turnstile 的集成代码不到 50 行。再加上 Feature Flag，本地开发可以关闭验证，生产环境再打开，比在每个表单里单独处理要干净。

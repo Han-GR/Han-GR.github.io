@@ -14,7 +14,7 @@ tags:
   - RuiToolAI
 ---
 
-> 每次 push 自动跑测试、自动部署到 Cloudflare Workers。这篇记录 RuiToolAI 的 CI/CD 搭建过程。
+> RuiToolAI 的 PR 只跑检查，合并到 `main` 后才构建并部署到 Cloudflare Workers。这里记录流水线配置和几个实际遇到的问题。
 
 ## 流水线设计
 
@@ -448,4 +448,3 @@ CI/CD 流水线的核心原则：
 - [Wrangler GitHub Action](https://github.com/cloudflare/wrangler-action)
 - [pnpm/action-setup](https://github.com/pnpm/action-setup)
 - [Playwright CI 配置](https://playwright.dev/docs/ci-intro)
-

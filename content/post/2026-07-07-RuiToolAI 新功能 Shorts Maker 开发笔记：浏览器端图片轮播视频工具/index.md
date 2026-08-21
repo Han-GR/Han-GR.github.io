@@ -18,13 +18,13 @@ tags:
 
 RuiToolAI 准备在 YouTube 上做内容宣传。不做硬广，把用户爱看的东西，做成 Shorts 短视频。
 
-问题来了：用什么工具做？市面上的视频编辑软件要么太重，要么要导出再上传，流程割裂。最简单的方式是：在 RuiToolAI 网站上直接生成图片，然后一键拼成轮播视频——**生成到发布，一个网站搞定**。
+市面上的视频编辑软件对这个需求有点重，而且图片需要导出后再导入。RuiToolAI 本来就能生成图片，所以我把轮播视频的组装和导出也放进了网页。
 
 于是就有了 Shorts Maker，免费开放给所有用户。
 
 ## 2. 核心功能一览
 
-操作起来很简单，三步出片：
+操作流程分为选图、配乐和导出：
 
 1. **选图**：本地上传图片，或从文生图历史记录中挑选
 2. **配乐**：上传背景音乐，拖动滑块调节音量，预览实时生效
@@ -162,7 +162,7 @@ onChange={(e) => {
 
 ## 5. 总结
 
-Shorts Maker 是一个典型的"浏览器能力边界探索"项目。Canvas 录制、Web Audio 混音、MediaRecorder 导出，这些 API 组合起来能做出一个完整的视频工具，但每个 API 都有坑：
+Shorts Maker 主要用到 Canvas 录制、Web Audio 混音和 MediaRecorder 导出。这三个 API 可以把工作都留在浏览器里，实现时也各有限制：
 
 - `requestAnimationFrame` 在后台会被节流
 - `MediaRecorder.onstop` 的绑定时序影响 Promise 是否 resolve

@@ -13,11 +13,11 @@ tags:
 ---
 ## 背景
 
-在开发 RuiToolAI 这个全栈 SaaS 项目时，面临一个核心问题：**部署在哪里**？
+开发 RuiToolAI 时，我先得解决一个很现实的问题：**部署在哪里**？
 
 传统方案是买一台 VPS（如阿里云、AWS EC2），装 Docker，跑 Node.js 服务。但作为一个独立开发者，我不希望把时间花在运维上。于是我调研了 Cloudflare Workers 这个 Serverless 方案，最终决定把整个项目跑在它上面。
 
-这篇文章就来聊聊为什么做出这个选择，以及实际使用中的经验和教训。
+最后我选了 Cloudflare Workers。下面记录当时的取舍，以及后来真正碰到的限制。
 
 ## 方案对比
 
@@ -138,7 +138,7 @@ Workers 不支持 Node.js 原生模块（如 `fs`、`net`、`crypto` 的部分 A
 | 需要 WebSocket 长连接 | 传统 VPS |
 | 低预算、低流量项目 | Cloudflare Workers |
 
-对于 RuiToolAI 这种 SaaS 产品，Workers 是完美的选择。零运维、按量付费、全球低延迟，让独立开发者可以专注于产品本身。
+对 RuiToolAI 当时的规模和功能来说，Workers 比 VPS 省心，成本也更好控制。它不适合长时间计算和依赖 Node.js 原生模块的任务，所以这个选择是匹配当前需求，不是说 Workers 在所有场景下都更好。
 
 ## 参考资源
 

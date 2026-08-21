@@ -13,7 +13,7 @@ tags:
   - RuiToolAI
 ---
 
-> 不用任何 JS 库，纯 CSS 实现无缝循环滚动。这是 RuiToolAI 客户评价组件的实现记录。
+> RuiToolAI 的客户评价需要持续向左滚动，悬停时暂停，循环位置不能跳动。这个效果用纯 CSS 就可以完成。
 
 ## 效果目标
 
@@ -386,4 +386,3 @@ animation: {
 - [CSS animation MDN 文档](https://developer.mozilla.org/en-US/docs/Web/CSS/animation)
 - [Tailwind CSS 自定义动画](https://tailwindcss.com/docs/animation#customizing-your-theme)
 - [CSS transform MDN 文档](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
-

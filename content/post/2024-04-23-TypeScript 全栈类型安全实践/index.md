@@ -12,7 +12,7 @@ tags:
   - RuiToolAI
 ---
 
-> 类型安全不只是"不报红线"。这篇聊聊在 RuiToolAI 里如何让类型从数据库一路贯穿到前端 UI。
+> 我想解决的不只是编辑器不报红线，而是字段改名时，能在编译阶段找到从数据库到前端的所有受影响位置。
 
 ## 为什么要全栈类型安全
 
@@ -374,4 +374,3 @@ next-safe-action → useAction → 客户端调用类型
 - [next-safe-action 文档](https://next-safe-action.dev/)
 - [TypeScript Utility Types](https://www.typescriptlang.org/docs/handbook/utility-types.html)
 - [Cloudflare Workers TypeScript](https://developers.cloudflare.com/workers/languages/typescript/)
-

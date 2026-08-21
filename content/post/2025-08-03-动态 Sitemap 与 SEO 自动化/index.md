@@ -13,7 +13,7 @@ tags:
   - SEO
 ---
 
-> 一个新博客发布后，自动进入 sitemap，自动配置 SEO 元数据。这些都是代码生成的，不是手写的。
+> CMS 中的内容会持续增加，手工维护 sitemap 很容易遗漏。RuiToolAI 直接从已发布内容生成 URL 和 SEO 元数据。
 
 ## Sitemap 自动生成
 
