@@ -3,7 +3,7 @@ title: AI 时代，代码正在变成产物
 description: ""
 slug: 2026-09-09-AI 时代，代码正在变成产物
 date: 2026-09-09
-image: ""
+image: think.jpg
 categories:
 tags:
   - 思考
