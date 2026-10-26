@@ -48,6 +48,7 @@ comments: false
 - [https://appicons.co](https://appicons.co): 查找Logo的，大部分的APP都能找到
 - [Linux命令大全](https://www.linuxcool.com/): Linux命令在线查询手册
 - [zamzar](https://www.zamzar.com/): 文件转换工具
+- [pdfcandy](https://pdfcandy.com/cn/): PDF工具
 - [photopea](https://www.photopea.com/): 在线PS工具
 - [pockyt](https://shop.pockyt.io): Apple 礼品卡充值网站
 
