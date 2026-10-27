@@ -62,6 +62,7 @@ comments: false
 - [JidiYouXi](https://www.jidiyouxi.com/): 一个免费的在线游戏库，提供免费的游戏下载
 - [myabandonware](https://www.myabandonware.com/): 下载老旧的电子游戏
 - [yiqi](https://www.yiqiys.com/): 视频网站，提供免费的最新的视频
+- [https://gemflix.site/]: 国外视频网站
 
 ### AI
 
